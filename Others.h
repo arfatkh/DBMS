@@ -50,8 +50,8 @@ template<typename T>
 class Value {
 public:
 	string datatype;		//to record the data type of Value Read from the file
-	int lineNumber[200];
-	string fileName[200];
+	int lineNumber;
+	string fileName;
 	T tuple;				//the key read from file
 
 	Value() {
@@ -63,6 +63,9 @@ public:
 		lineNumber = ln;
 		fileName = fn;
 		tuple = obj;
+	}
+	void operator=(T key) {
+		tuple = key;
 	}
 	bool operator<(int obj) {		//When datatype int is compared e.g. when ID is compared or the number of deaths
 		if (tuple < obj)
