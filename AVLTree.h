@@ -62,10 +62,10 @@ public:
         return N->height;
     }
     //A data type Value is made
-    Node<T>* newNode(Value<T> key)
+    Node<T>* newNode(Value<T>* key)
     {
         Node<T>* node = new Node<T>;
-        node->key = key.tuple;
+        node->key = key->tuple;
         node->val = key;                    //The Value val
         node->left = NULL;
         node->right = NULL;
@@ -131,7 +131,7 @@ public:
     {
 
         if (node == NULL)
-            return(newNode(key));
+            return(newNode(&key));
 
         if (key < node->key)                                //comparison operator overloading of class data type is used
             node->left = insertNode(node->left, key);
