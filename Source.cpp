@@ -40,29 +40,29 @@ int main() {
 	Value<int> d1;
 	d1.insert("11", 1, 10);
 	Node<int> n1(&d1);
-	tree.root = tree.insertNode(tree.root,10);
+	tree.root = tree.insertNode(tree.root,d1);
 
 	Value<int> d2;
 	d2.insert("!!", 1, 20);
 	Node<int> n2(&d2);
-	tree.root = tree.insertNode(tree.root,20);
+	tree.root = tree.insertNode(tree.root,d2);
 
 	//Data<int> d3(50, 2004, 42, "Cigis", "Ohio", 6.9);
 	d2.insert("!!", 1, 50);
 
 	Node<int> n3(&d2);
-	tree.root = tree.insertNode(tree.root,50);
+	tree.root = tree.insertNode(tree.root,d2);
 
-	Data<int> d4(80, 2004, 42, "Ligma", "Alabama", 6.9);
+	//Data<int> d4(80, 2004, 42, "Ligma", "Alabama", 6.9);
 	d2.insert("!!", 1, 80);
 	Node<int> n4(&d2);
-	tree.root = tree.insertNode(tree.root,80);
+	tree.root = tree.insertNode(tree.root,d2);
 
-	Data<int> d5(1, 2004, 42, "Saqmadiq", "Ohio", 6.9);
+//	Data<int> d5(1, 2004, 42, "Saqmadiq", "Ohio", 6.9);
 	d2.insert("!!", 1, 1);
 
 	Node<int> n5(&d2);
-	tree.root = tree.insertNode(tree.root,1);
+	tree.root = tree.insertNode(tree.root,d2);
 
 	tree.InOrderTraversal(tree.root);
 	//tree.levelorder_newline();
