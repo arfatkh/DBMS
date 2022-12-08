@@ -49,9 +49,10 @@ public:
 template<typename T>
 class Value {
 public:
+	string datatype;		//to record the data type of Value Read from the file
 	int lineNumber[200];
 	string fileName[200];
-	T tuple;
+	T tuple;				//the key read from file
 
 	Value() {
 		lineNumber = 0;
@@ -62,6 +63,38 @@ public:
 		lineNumber = ln;
 		fileName = fn;
 		tuple = obj;
+	}
+	bool operator<(int obj) {		//When datatype int is compared e.g. when ID is compared or the number of deaths
+		if (tuple < obj)
+			return true;
+		return false;
+	}
+	bool operator>(int obj) {
+		if (tuple > obj)
+			return true;
+		return false;
+	}
+	//when the obj is float
+	bool operator<(float obj) {		//When datatype float is compared e.g. when death rate is compared or the number of deaths
+		if (tuple < obj)
+			return true;
+		return false;
+	}
+	bool operator>(float obj) {
+		if (tuple > obj)
+			return true;
+		return false;
+	}
+	//when the obj is string
+	bool operator<(string obj) {		//When datatype string is compared e.g. when Name is compared or the number of deaths
+		if (strcmp(tuple,obj) == -1)
+			return true;
+		return false;
+	}
+	bool operator>(string obj) {
+		if (strcmp(tuple, obj) == 1)
+			return true;
+		return false;
 	}
 
 };
