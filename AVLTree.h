@@ -3,6 +3,9 @@
 #include"Others.h"
 using namespace std;
 
+//insert's value
+//value operator
+
 template<typename T>
 struct Node {
 public:
@@ -58,11 +61,12 @@ public:
             return 0;
         return N->height;
     }
-
-    Node<T>* newNode(T key)
+    //A data type Value is made
+    Node<T>* newNode(Value<T> key)
     {
-        Node<T>* node = new Node<T>();
-        node->key = key;
+        Node<T>* node = new Node<T>;
+        node->key = key.tuple;
+        node->val = key;                    //The Value val
         node->left = NULL;
         node->right = NULL;
         node->height = 1; // new node is initially
@@ -114,22 +118,22 @@ public:
         return height(N->left) - height(N->right);
     }
 
-    void insert(Node<T>* node) {
+    /*void insert(Node<T>* node) {
         T key = node->key;
         if (root = NULL) {
             root = node;
         }
         else
             root = insertNode(node, node->key);
-    }
+    }*/
 
-    Node<T>* insertNode(Node<T>* node, T key)
+    Node<T>* insertNode(Node<T>* node, Value<T> key)
     {
 
         if (node == NULL)
             return(newNode(key));
 
-        if (key < node->key)
+        if (key < node->key)                                //comparison operator overloading of class data type is used
             node->left = insertNode(node->left, key);
         else if (key > node->key)
             node->right = insertNode(node->right, key);
