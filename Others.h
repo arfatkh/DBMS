@@ -64,6 +64,17 @@ public:
 		fileName = fn;
 		tuple = obj;
 	}
+	//comparison Operator overloading with Value<T> as parameter
+	bool operator<(Value<T> v) {
+		if (tuple < v.tuple)
+			return true;
+		return false;
+	}
+	bool operator>(Value<T> v) {
+		if (tuple > v.tuple)
+			return true;
+		return false;
+	}
 	void operator=(T key) {
 		tuple = key;
 	}
