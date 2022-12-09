@@ -12,11 +12,11 @@ public:
     T key;
     //Data* val;
    
-    Value<int>* val;                     //---------> for sake of testing. Assuming that the data type is int to easily check > and <
+    Value<T>* val;                    //---------> for sake of testing. Assuming that the data type is int to easily check > and <
    
     Node* left, * right;
     int height;
-    Node() { key = 0; val = new Value<int>; left = NULL; right = NULL; height = -1; }
+    Node() { val = new Value<T>; left = NULL; right = NULL; height = -1; }
     Node(Value<T>* data) {
         key = data->tuple;
         val = data;

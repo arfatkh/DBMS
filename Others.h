@@ -1,5 +1,6 @@
 #pragma once
 #include<iostream>
+#include<string>
 using namespace std;
 /*
 	Data is the field of data
@@ -57,13 +58,14 @@ public:
 	Value() {
 		lineNumber = 0;
 		//fileName= NULL;
-		tuple = NULL;
+		// tuple = NULL;
 	}
 	void insert(string fn, int ln, T obj) {
 		lineNumber = ln;
 		fileName = fn;
 		tuple = obj;
 	}
+
 	//comparison Operator overloading with Value<T> as parameter
 	bool operator<(Value<T> v) {
 		if (tuple < v.tuple)
@@ -75,6 +77,9 @@ public:
 			return true;
 		return false;
 	}
+
+
+
 	void operator=(T key) {
 		tuple = key;
 	}
@@ -101,14 +106,26 @@ public:
 	}
 	//when the obj is string
 	bool operator<(string obj) {		//When datatype string is compared e.g. when Name is compared or the number of deaths
-		if (strcmp(tuple,obj) == -1)
+		if (strcmp(tuple.c_str(),obj.c_str()) == -1)
 			return true;
 		return false;
 	}
+
 	bool operator>(string obj) {
-		if (strcmp(tuple, obj) == 1)
+		if (strcmp(tuple.c_str(), obj.c_str()) == 1)
 			return true;
 		return false;
+	}
+
+	ostream& operator<<(ostream& out) {
+		out << tuple;
+		return out;
+	}
+
+	void print() {
+		cout << "Line Number: " << lineNumber << endl;
+		cout << "File Name: " << fileName << endl;
+		cout << "Tuple[KEY]: " << tuple << endl;
 	}
 
 };
