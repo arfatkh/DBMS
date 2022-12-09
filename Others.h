@@ -54,7 +54,7 @@ public:
 	int lineNumber;
 	string fileName;
 	T tuple;				//the key read from file
-	
+
 
 
 	Value() {
@@ -81,6 +81,29 @@ public:
 			return true;
 		return false;
 	}
+
+	//If  is string
+	// if constexpr (std::is_same<T, string>::value) 
+	// {
+
+	// 	bool operator<(Value<T> v) {
+	// 	if (strcmp(tuple.c_str(),obj.c_str()) == -1)
+	// 		return true;
+	// 	return false;
+	// 	}
+
+
+	// 	bool operator>(Value<T> v) {
+	// 	if (strcmp(tuple.c_str(), obj.c_str()) == 1)
+	// 		return true;
+	// 	return false;
+
+
+
+	// }
+
+
+
 
 
 
