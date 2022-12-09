@@ -389,19 +389,6 @@ public:
 		cout << endl;
 	}
 
-	/////////////////////////TASK2//////////////////////////////
-	template<typename T>
-	void mergeLists(SLinkedList<T> obj) {
-		node_list<T>* current1 = head;
-		node_list<T>* current2 = obj.head;
-		SLinkedList<T>* temp = new SLinkedList<T>;
-		int index_current = 0;
-		while (current1 && current2) {
-			temp->insert(current1->data);
-			temp->insert(current2->data);
-			current1 = current1->next;
-			current2 = current2->next;
-		}
-		head = temp->head;
-	}
+	
+	
 };

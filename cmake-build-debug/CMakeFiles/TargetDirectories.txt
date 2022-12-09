@@ -1,0 +1,3 @@
+/Users/arfat/Coding/Fast/DBMS/cmake-build-debug/CMakeFiles/DBMS.dir
+/Users/arfat/Coding/Fast/DBMS/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/arfat/Coding/Fast/DBMS/cmake-build-debug/CMakeFiles/rebuild_cache.dir
