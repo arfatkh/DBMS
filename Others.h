@@ -54,6 +54,8 @@ public:
 	int lineNumber;
 	string fileName;
 	T tuple;				//the key read from file
+	
+
 
 	Value() {
 		lineNumber = 0;
@@ -64,6 +66,8 @@ public:
 		lineNumber = ln;
 		fileName = fn;
 		tuple = obj;
+
+
 	}
 
 	//comparison Operator overloading with Value<T> as parameter
@@ -127,6 +131,8 @@ public:
 		cout << "File Name: " << fileName << endl;
 		cout << "Tuple[KEY]: " << tuple << endl;
 	}
+
+	
 
 };
 
