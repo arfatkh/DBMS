@@ -3,6 +3,7 @@
 #include<fstream>
 #include<string>
 #include "AVLtree.h"
+#include "myDataStructures.h"
 using namespace std;
 
 
@@ -156,8 +157,8 @@ void Read_all_field_AVL(AVLtree<T>* avltree,string  field, string filename) {
 		avltree->root = avltree->insertNode(avltree->root, v);
 
 
-		cout<<"------------------"<<endl;
-		v.print();
+		// cout<<"------------------"<<endl;
+		// v.print();
 
 
 
@@ -185,4 +186,53 @@ void Read_all_files_AVL(AVLtree<T>* avltree, string field) {
 
 }
 
+
+
+
+//========================================================================================================
+// Saving the trees to a file
+
+
+
+//Save the AVL tree to a file
+template <typename T>
+void saveAVLTree(AVLtree<T>* avltree, string filename) {
+
+	//Open the file
+	// ofstream file(filename, ios::out | ios::binary);
+	// if (!file.is_open()) {
+	// 	cout << "File not found" << endl;
+	// 	return;
+	// }
+
+	
+
+	//Save the tree using the inorder traversal
+	// avltree->inorder(avltree->root, file);
+	myDS::stack<Node<T>*> ValueStack;
+	Node<T>* current = avltree->root;
+
+	//cout cuurent->val->tuple
+	cout<<current->val->tuple<<endl;
+
+	// cout<<"Saving the tree to file"<<endl;
+	// while (current != NULL || !ValueStack.isEmpty()) {
+	// 	while (current != NULL) {
+	// 		ValueStack.push(current);
+	// 		current = current->left;
+	// 	}
+
+	// 	current = ValueStack.Peek()->val;
+	// 	ValueStack.pop();
+
+	// 	cout<<current->val->tuple<<endl;
+
+	// 	// cout << current->value.tuple << endl;
+	// 	// file << current->value.tuple << endl;
+	// 	current = current->right;
+	// }
+	
+
+	
+}
 

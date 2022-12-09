@@ -67,14 +67,28 @@ int main() {
 	//tree.levelorder_newline();
 	////tree.levelorder_newline(tree.root);
 
-	string field = "state";
+	string field = "deaths";
 	// string filename = "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_1.csv";
 	
-	AVLtree<string>* test= new AVLtree<string>;
-	// Read_all_field_AVL<int>(test,field, filename);
-	Read_all_files_AVL<string>(test, field);
-	
+	// typedef Choosen
 
+	AVLtree<int>* test= new AVLtree<int>;
+	// Read_all_field_AVL<int>(test,field, filename);
+	Read_all_files_AVL<int>(test, field);
+
+
+	// Value<string> some;
+	// some.insert("A", 1, "AIDS");
+
+
+	// test->root = test->insertNode(test->root,some);
+
+	// Value<string> some1;
+	// some1.insert("B", 1, "B");
+
+
+
+	saveAVLTree(test, "avl.bat");
 
 
 
