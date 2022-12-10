@@ -154,12 +154,12 @@ int main() {
 
 	AVLtree<Choosen>* test= new AVLtree<Choosen>;
 	// Read_all_field_AVL<int>(test,field, filename);
-	// Read_all_files_AVL<Choosen>(test, field);
+	Read_all_files_AVL<Choosen>(test, field);
 
 
 	// saveAVLTree(test, "avlString.dat");
 	
-	LoadAVLTree<Choosen>(test, "avlString.dat");
+	// LoadAVLTree<Choosen>(test, "avlString.dat");
 
 
 	// printTree(test->root, nullptr, false);

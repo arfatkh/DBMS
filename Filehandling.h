@@ -182,7 +182,7 @@ void Read_all_files_AVL(AVLtree<T>* avltree, string field) {
 
 
 	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_1.csv");
-	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_2.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_2.csv");
 	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_3.csv");
 	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_4.csv");
 	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_5.csv");

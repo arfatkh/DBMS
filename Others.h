@@ -56,7 +56,7 @@ class Value {
 public:
 	string datatype;		//to record the data type of Value Read from the file
 	int lineNumber[5000];
-	string fileName;
+	string fileName[5000];
 	T tuple;				//the key read from file
 	int Entries=0;			//number of entries with same key
 
@@ -69,24 +69,30 @@ public:
 	void insert(string fn, int ln, T obj) {
 		
 		lineNumber[Entries] = ln;
-		fileName = fn;
+		fileName[Entries] = fn;
 		tuple = obj;
 
 		Entries++;
 
 	}
 
-	void duplicates(int ent,string fn, int* ln, T obj)
+	void duplicates(int ent,string* fn, int* ln, T obj)
 	{
 
 		for (int i = Entries; i < ent+Entries; i++)
 		{
 			lineNumber[i] = ln[i-Entries];		
 		}
-		
+
+		for (int i = Entries; i < ent+Entries; i++)
+		{
+			fileName[i] = fn[i-Entries];		
+		}
+
+
 		Entries += ent;
 		// lineNumber[Entries] = ln;
-		fileName = fn;
+		// fileName = fn;
 		tuple = obj;
 		// fileName = fn;
 
@@ -207,8 +213,12 @@ public:
 		out.write(datatype.c_str(), datatype.size());
 		out.write("\0", sizeof(char));
 		out.write(reinterpret_cast<char*>(&lineNumber), sizeof(lineNumber));
-		out.write(fileName.c_str(), fileName.size());
-		out.write("\0", sizeof(char));
+		for (int i=0; i < Entries; i++)
+		{
+			out.write(fileName[i].c_str(), fileName[i].size());
+			out.write("\0", sizeof(char));
+		}
+	
 		//if T is string
 		if constexpr (std::is_same<T, string>::value) {
 			out.write(tuple.c_str(), tuple.size());
@@ -224,7 +234,11 @@ public:
 		in.read((char*)&Entries, sizeof(Entries)); //read the number of entries
 		getline(in,datatype, '\0'); //read the datatype
 		in.read((char*)&lineNumber, sizeof(lineNumber)); //read the line number
-		getline(in,fileName, '\0'); //read the file name
+		for (int i=0; i < Entries; i++)
+		{
+			getline(in,fileName[i], '\0'); //read the file name
+
+		}
 
 		//if T is string
 		if constexpr (std::is_same<T, string>::value) {
