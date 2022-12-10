@@ -136,23 +136,36 @@ int main() {
 
 	// string filename = "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_1.csv";
 	
+	//Availble fields
+
+
+	// if (field == "id") return 0;
+	// if (field == "year") return 1;
+	// if (field == "133cause") return 2;
+	// if (field == "cause") return 3;
+	// if (field == "state") return 4;
+	// if (field == "deaths") return 5;
+	// if (field == "agedeathrate") return 6;
+	typedef string Choosen;
+
+
 	// typedef Choosen
 	string field = "state";
 
-	AVLtree<string>* test= new AVLtree<string>;
+	AVLtree<Choosen>* test= new AVLtree<Choosen>;
 	// Read_all_field_AVL<int>(test,field, filename);
-	// Read_all_files_AVL<string>(test, field);
+	// Read_all_files_AVL<Choosen>(test, field);
 
 
 	// saveAVLTree(test, "avlString.dat");
 	
-	LoadAVLTree<string>(test, "avlString.dat");
+	LoadAVLTree<Choosen>(test, "avlString.dat");
 
 
 	// printTree(test->root, nullptr, false);
 
 // 
-	// test->InOrderTraversal(test->root);
+	test->InOrderTraversal(test->root);
 
 
 	return 0;

@@ -64,9 +64,12 @@ public:
     //A data type Value is made
     Node<T>* newNode(Value<T>* key)
     {
+
         Node<T>* node = new Node<T>;
         node->key = key->tuple;
-        node->val->insert(key->fileName, key->lineNumber[0], key->tuple);
+        // node->val->Entries = key->Entries;
+        // node->val->fileName = key->fileName;
+        node->val->duplicates(key->Entries,key->fileName, key->lineNumber, key->tuple);
 
         // node->val->lineNumber = key->lineNumber;              
         
@@ -83,6 +86,31 @@ public:
         // added at leaf 
         return(node);
     }
+
+    // Node<T>* buildFromFile(Value<T> val)
+    // {
+    //     Node<T>* node = new Node<T>;
+    //     node->key = val.tuple;
+    //     node->val->Entries = val.Entries;
+    //     // node->val->fileName = key->fileName;
+    //     node->val->insert(val.fileName, val.lineNumber[0], val.tuple);
+
+    //     // node->val->lineNumber = key->lineNumber;              
+
+    //     //The Value val
+    //     // strcpy(node->val->fileName, key->fileName);
+    //     // node->val->fileName = key->fileName;
+    //     // node->val->tuple = key->tuple;
+    //     // node->val->datatype = key->datatype;
+    //     // strcpy(node->val->fileName, key->fileName);
+
+    //     node->left = NULL;
+    //     node->right = NULL;
+    //     node->height = 1; // new node is initially
+    //     // added at leaf 
+    //     return(node);
+
+    // }
 
     Node<T>* rightRotate(Node<T>* y)
     {
@@ -149,8 +177,8 @@ public:
             node->right = insertNode(node->right, key);
         else // Equal keys not allowed 
         {
-            node->val->duplicates(key.fileName, key.lineNumber[0], key.tuple); 
-            node->val->print();
+            node->val->duplicates(key.Entries,key.fileName, key.lineNumber, key.tuple); 
+            // node->val->print();
             return node;
 
 

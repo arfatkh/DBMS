@@ -50,11 +50,12 @@ public:
 /*
 	val of the Node of a tree
 */
+
 template<typename T>
 class Value {
 public:
 	string datatype;		//to record the data type of Value Read from the file
-	int lineNumber[500];
+	int lineNumber[5000];
 	string fileName;
 	T tuple;				//the key read from file
 	int Entries=0;			//number of entries with same key
@@ -75,14 +76,21 @@ public:
 
 	}
 
-	void duplicates(string fn, int ln, T obj)
+	void duplicates(int ent,string fn, int* ln, T obj)
 	{
-		lineNumber[Entries] = ln;
-		// fileName = fn;
-		tuple = obj;
-		fileName = fn;
 
-		Entries++;
+		for (int i = Entries; i < ent+Entries; i++)
+		{
+			lineNumber[i] = ln[i-Entries];		
+		}
+		
+		Entries += ent;
+		// lineNumber[Entries] = ln;
+		fileName = fn;
+		tuple = obj;
+		// fileName = fn;
+
+		// Entries++;
 
 	}
 	
