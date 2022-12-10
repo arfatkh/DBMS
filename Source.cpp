@@ -3,69 +3,9 @@
 #include"Filehandling.h"
 // #include"RBTree.h"
 // #include"Others.h"
-
+#include "Menu.h"
 using namespace std;
 
-
-
-
-struct Trunk
-{
-	Trunk *prev;
-	string str;
-
-	Trunk(Trunk *prev, string str)
-	{
-		this->prev = prev;
-		this->str = str;
-	}
-};
-
-// Helper function to print branches of the binary tree
-void showTrunks(Trunk *p)
-{
-	if (p == nullptr) {
-		return;
-	}
-
-	showTrunks(p->prev);
-	cout << p->str;
-}
-
-void printTree(Node<int>* root, Trunk *prev, bool isLeft)
-{
-	if (root == nullptr) {
-		return;
-	}
-
-	string prev_str = "    ";
-	Trunk *trunk = new Trunk(prev, prev_str);
-
-	printTree(root->right, trunk, true);
-
-	if (!prev) {
-		trunk->str = "———";
-	}
-	else if (isLeft)
-	{
-		trunk->str = ".———";
-		prev_str = "   |";
-	}
-	else {
-		trunk->str = "`———";
-		prev->str = prev_str;
-	}
-
-	showTrunks(trunk);
-	cout << " " << root->key << endl;
-
-	if (prev) {
-		prev->str = prev_str;
-	}
-	trunk->str = "   |";
-
-	printTree(root->left, trunk, false);
-}
 
 
 
@@ -83,7 +23,7 @@ int main() {
 	cout << "2.\tUpdate in file\n";
 	cout << "3.\tDelete from file\n";
 	cin >> c;
-	switch (c)
+	switch (c)	
 	{
 	case 1:
 		cout << "Which field you want to read?\n";
@@ -146,26 +86,28 @@ int main() {
 	// if (field == "state") return 4;
 	// if (field == "deaths") return 5;
 	// if (field == "agedeathrate") return 6;
-	typedef int Choosen;
+// 	typedef int Choosen;
 
 
-	// typedef Choosen
-	string field = "id";
+// 	// typedef Choosen
+// 	string field = "id";
 
-	AVLtree<Choosen>* test= new AVLtree<Choosen>;
-	// Read_all_field_AVL<int>(test,field, filename);
-	Read_all_files_AVL<Choosen>(test, field);
+// 	AVLtree<Choosen>* test= new AVLtree<Choosen>;
+// 	// Read_all_field_AVL<int>(test,field, filename);
+// 	Read_all_files_AVL<Choosen>(test, field);
 
 
-	// saveAVLTree(test, "avlString.dat");
+// 	// saveAVLTree(test, "avlString.dat");
 	
-	// LoadAVLTree<Choosen>(test, "avlString.dat");
+// 	// LoadAVLTree<Choosen>(test, "avlString.dat");
 
 
-	// printTree(test->root, nullptr, false);
+// 	// printTree(test->root, nullptr, false);
 
-// 
-	test->InOrderTraversal(test->root);
+// // 
+// 	test->InOrderTraversal(test->root);
+
+	MenuMain();
 
 
 	return 0;
