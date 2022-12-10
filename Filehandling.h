@@ -63,17 +63,20 @@ Value<T> StringToValue(string line, int fieldIndex, int lineNumber, string filen
 
 	// Check the type of T
 	if constexpr (std::is_same<T, int>::value) {
-		returnObj.datatype = "int";
-		returnObj.tuple = stoi(value);
+
+		returnObj.insert(filename, lineNumber,stoi(value));
 	}
 	
 	else if constexpr (std::is_same<T, float>::value) {
-		returnObj.datatype = "float";
-		returnObj.tuple = stof(value);
+		// returnObj.datatype = "float";
+		// // strcpy(returnObj.datatype, "float");
+		// returnObj.tuple = stof(value);
+		returnObj.insert(filename, lineNumber, stof(value));
 	}
 	else if constexpr (std::is_same<T, string>::value) {
-		returnObj.datatype = "string";
-		returnObj.tuple = value;
+		// returnObj.datatype = "string";
+		// returnObj.tuple = value;
+		returnObj.insert(filename, lineNumber, value);
 	}
 	else {
 		//Error
@@ -85,8 +88,8 @@ Value<T> StringToValue(string line, int fieldIndex, int lineNumber, string filen
 	
 	//Set the other values
 	
-	returnObj.lineNumber = lineNumber;
-	returnObj.fileName = filename;
+	// returnObj.lineNumber = lineNumber;
+	// returnObj.fileName = filename;
 	
 
 
@@ -157,9 +160,7 @@ void Read_all_field_AVL(AVLtree<T>* avltree,string  field, string filename) {
 		avltree->root = avltree->insertNode(avltree->root, v);
 
 
-		// cout<<"------------------"<<endl;
-		// v.print();
-
+	
 
 
 
@@ -183,6 +184,14 @@ void Read_all_files_AVL(AVLtree<T>* avltree, string field) {
 	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_1.csv");
 	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_2.csv");
 	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_3.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_4.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_5.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_6.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_7.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_8.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_9.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_10.csv");
+
 
 }
 
@@ -199,21 +208,52 @@ template <typename T>
 void saveAVLTree(AVLtree<T>* avltree, string filename) {
 
 	//Open the file
-	// ofstream file(filename, ios::out | ios::binary);
-	// if (!file.is_open()) {
-	// 	cout << "File not found" << endl;
-	// 	return;
-	// }
+	ofstream file(filename, ios::binary);
+	if (!file.is_open()) {
+		cout << "File not found" << endl;
+		return;
+	}
 
 	
+	//Save the tree using the Level order traversal
+	myDS::Queue<Node<T>*> ValueQueue;
+	ValueQueue.enqueue(avltree->root);
 
-	//Save the tree using the inorder traversal
-	// avltree->inorder(avltree->root, file);
-	myDS::stack<Node<T>*> ValueStack;
-	Node<T>* current = avltree->root;
+	int count = 0;
+	cout<<"Saving the tree to file"<<endl;
+	while (!ValueQueue.isEmpty()) {
+		
+		
 
-	//cout cuurent->val->tuple
-	cout<<current->val->tuple<<endl;
+		Node<T>* current = ValueQueue.dequeue();
+
+		// if(count<10) current->val->print();
+
+		//Save the value to the file
+		current->val->writeToBinaryFile(file);
+
+		// count++;
+
+		// cout<<current->val->datatype.c_<<endl;
+		// cout<<current->val->datatype.i_<<endl;
+		// cout<<current->val->datatype.f_<<endl;
+		// cout<<current->val->datatype.d_<<endl;
+		// cout<<current->val->lineNumber<<endl;
+		// cout<<current->val->fileName<<endl;
+
+		if (current->left != NULL) ValueQueue.enqueue(current->left);
+		if (current->right != NULL) ValueQueue.enqueue(current->right);
+	}
+
+
+
+	// //Save the tree using the inorder traversal
+	// // avltree->inorder(avltree->root, file);
+	// myDS::stack<Node<T>*> ValueStack;
+	// Node<T>* current = avltree->root;
+
+	// //cout cuurent->val->tuple
+	// // cout<<current->key<<endl;
 
 	// cout<<"Saving the tree to file"<<endl;
 	// while (current != NULL || !ValueStack.isEmpty()) {
@@ -225,14 +265,120 @@ void saveAVLTree(AVLtree<T>* avltree, string filename) {
 	// 	current = ValueStack.Peek()->val;
 	// 	ValueStack.pop();
 
-	// 	cout<<current->val->tuple<<endl;
+
+
+	// 	// //Writing Value to file attribute by attribute
+	// 	// file.write((char*)&current->val->datatype.c_str(), sizeof(current->val->datatype.c_str()));
+	// 	// file.write("\0", sizeof(char));
+	// 	// file.write((char*)&current->val->lineNumber, sizeof(current->val->lineNumber));
+	// 	// file.write((char*)&current->val->fileName.c_str(), sizeof(current->val->fileName.c_str()));
+	// 	// file.write("\0", sizeof(char));
+
+	// 	//
+	// 	current->val->print();
+
+	// 	current->val->writeToBinaryFile(file);
 
 	// 	// cout << current->value.tuple << endl;
 	// 	// file << current->value.tuple << endl;
 	// 	current = current->right;
 	// }
 	
+	file.close();
+}
+
+template <typename T>
+void LoadAVLTree(AVLtree<T>* avltree, string filename) {
+
+	// Value<float> v;
+	// v.datatype = "string";
+	// v.lineNumber = 1;
+	// v.fileName = "test3.txt";
+	// v.tuple = 39.6;
+
+	// ofstream file(filename, ios::binary );
+	// if (!file.is_open()) {
+	// 	cout << "File not found" << endl;
+	// 	return;
+	// }
+
+	// v.writeToBinaryFile(file);
+
+
+
+
+
+	//To read from the file
+	ifstream file(filename, ios::binary);
+
+	Value<T> v2;
+
+
+	while(!file.eof()) {
+		v2.readFromBinaryFile(file);
+		// v2.print();
+		avltree->root = avltree->insertNode(avltree->root, v2);
+
+		// v2.print();
+
+
+	}
+
+
+
+
+	// file.write(v.datatype.c_str(), v.datatype.size());
+	// file.write("\0", sizeof(char));
+	// file.write((char*)&v.lineNumber, sizeof(v.lineNumber));
+	// file.write(v.fileName.c_str(), v.fileName.size());
+	// file.write("\0", sizeof(char));
+	// file.write((char*)&v.tuple, sizeof(v.tuple));
 
 	
+	// Value<int> v2;
+	// ifstream file(filename, ios::in | ios::binary);
+	// if (!file.is_open()) {
+	// 	cout << "File not found" << endl;
+	// 	return;
+	// }
+	
+	// getline(file, v2.datatype, '\0');
+	// file.read((char*)&v2.lineNumber, sizeof(v2.lineNumber));
+	// getline(file, v2.fileName, '\0');
+	// file.read((char*)&v2.tuple, sizeof(v2.tuple));
+
+	// v2.print();
+
+
+
+	// //Open the file
+	// ifstream file(filename, ios::in | ios::binary);
+	// if (!file.is_open()) {
+	// 	cout << "File not found" << endl;
+	// 	return;
+	// }
+
+	
+
+
+
+
+
+
+	// cout<<"Loading the ALV tree from file"<<endl;
+	
+	// //Read the file
+	// Value<T> v;
+
+
+	// // while (file.read((char*)&v, sizeof(v))) {
+		
+
+
+
+
+
+	// // }
+
 }
 

@@ -1,7 +1,10 @@
 #pragma once
 #include<iostream>
 #include<string>
+#include<fstream>
 using namespace std;
+
+
 /*
 	Data is the field of data
 */
@@ -47,30 +50,58 @@ public:
 /*
 	val of the Node of a tree
 */
+
 template<typename T>
 class Value {
 public:
 	string datatype;		//to record the data type of Value Read from the file
-	int lineNumber;
-	string fileName;
+	int lineNumber[5000];
+	string fileName[5000];
 	T tuple;				//the key read from file
-
+	int Entries=0;			//number of entries with same key
 
 
 	Value() {
-		lineNumber = 0;
+		lineNumber[0] = 0;
 		//fileName= NULL;
 		// tuple = NULL;
 	}
 	void insert(string fn, int ln, T obj) {
-		lineNumber = ln;
-		fileName = fn;
+		
+		lineNumber[Entries] = ln;
+		fileName[Entries] = fn;
 		tuple = obj;
 
+		Entries++;
 
 	}
 
-	//comparison Operator overloading with Value<T> as parameter
+	void duplicates(int ent,string* fn, int* ln, T obj)
+	{
+
+		for (int i = Entries; i < ent+Entries; i++)
+		{
+			lineNumber[i] = ln[i-Entries];		
+		}
+
+		for (int i = Entries; i < ent+Entries; i++)
+		{
+			fileName[i] = fn[i-Entries];		
+		}
+
+
+		Entries += ent;
+		// lineNumber[Entries] = ln;
+		// fileName = fn;
+		tuple = obj;
+		// fileName = fn;
+
+		// Entries++;
+
+	}
+	
+
+	// //comparison Operator overloading with Value<T> as parameter
 	bool operator<(Value<T> v) {
 		if (tuple < v.tuple)
 			return true;
@@ -86,17 +117,27 @@ public:
 	// if constexpr (std::is_same<T, string>::value) 
 	// {
 
-	// 	bool operator<(Value<T> v) {
-	// 	if (strcmp(tuple.c_str(),obj.c_str()) == -1)
-	// 		return true;
-	// 	return false;
+	// bool operator<(Value<T> v) {
+	// 	if constexpr (std::is_same<T, string>::value) {
+	// 		if (strcmp(tuple.c_str(), v.tuple.c_str()) == -1)
+	// 			return true;
+	// 		return false;
 	// 	}
-
-
-	// 	bool operator>(Value<T> v) {
-	// 	if (strcmp(tuple.c_str(), obj.c_str()) == 1)
+	// 	else if (tuple < v.tuple)
 	// 		return true;
 	// 	return false;
+	// }
+
+	// bool operator>(Value<T> v) {
+	// 	if constexpr (std::is_same<T, string>::value) {
+	// 		if (strcmp(tuple.c_str(), v.tuple.c_str()) == 1)
+	// 			return true;
+	// 		return false;
+	// 	}
+	// 	else if (tuple > v.tuple)
+	// 		return true;
+	// 	return false;
+	// }
 
 
 
@@ -133,13 +174,13 @@ public:
 	}
 	//when the obj is string
 	bool operator<(string obj) {		//When datatype string is compared e.g. when Name is compared or the number of deaths
-		if (strcmp(tuple.c_str(),obj.c_str()) == -1)
+		if (strcmp(tuple.c_str(),obj.c_str()) < 0)
 			return true;
 		return false;
 	}
 
 	bool operator>(string obj) {
-		if (strcmp(tuple.c_str(), obj.c_str()) == 1)
+		if (strcmp(tuple.c_str(), obj.c_str()) > 0)
 			return true;
 		return false;
 	}
@@ -150,9 +191,65 @@ public:
 	}
 
 	void print() {
-		cout << "Line Number: " << lineNumber << endl;
-		cout << "File Name: " << fileName << endl;
-		cout << "Tuple[KEY]: " << tuple << endl;
+
+		cout<<"----------------------------------"<<Entries<<"------------------------------"<<endl;
+		for (int i = 0; i < Entries; i++)
+		{
+			cout<<"Entry Number: "<<i+1<<endl;
+			cout << "Line Number: " << lineNumber[i] << endl;
+			cout << "File Name: " << fileName[i] << endl;
+			cout << "Tuple[KEY]: " << tuple << endl;
+		}
+		
+
+	}
+
+	void writeToBinaryFile(ofstream& out) {
+		
+
+
+	
+		out.write(reinterpret_cast<char*>(&Entries), sizeof(Entries));
+		out.write(datatype.c_str(), datatype.size());
+		out.write("\0", sizeof(char));
+		out.write(reinterpret_cast<char*>(&lineNumber), sizeof(lineNumber));
+		for (int i=0; i < Entries; i++)
+		{
+			out.write(fileName[i].c_str(), fileName[i].size());
+			out.write("\0", sizeof(char));
+		}
+	
+		//if T is string
+		if constexpr (std::is_same<T, string>::value) {
+			out.write(tuple.c_str(), tuple.size());
+			out.write("\0", sizeof(char));
+		}
+		else
+			out.write(reinterpret_cast<char*>(&tuple), sizeof(tuple));
+
+	}
+
+	void readFromBinaryFile(ifstream& in) {
+
+		in.read((char*)&Entries, sizeof(Entries)); //read the number of entries
+		getline(in,datatype, '\0'); //read the datatype
+		in.read((char*)&lineNumber, sizeof(lineNumber)); //read the line number
+		for (int i=0; i < Entries; i++)
+		{
+			getline(in,fileName[i], '\0'); //read the file name
+
+		}
+
+		//if T is string
+		if constexpr (std::is_same<T, string>::value) {
+			getline(in,tuple, '\0'); //read the tuple
+		}
+		else
+			in.read((char*)&tuple, sizeof(tuple)); //read the tuple
+
+
+		// this->print();
+
 	}
 
 	

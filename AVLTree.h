@@ -64,15 +64,53 @@ public:
     //A data type Value is made
     Node<T>* newNode(Value<T>* key)
     {
+
         Node<T>* node = new Node<T>;
         node->key = key->tuple;
-        node->val = key;                    //The Value val
+        // node->val->Entries = key->Entries;
+        // node->val->fileName = key->fileName;
+        node->val->duplicates(key->Entries,key->fileName, key->lineNumber, key->tuple);
+
+        // node->val->lineNumber = key->lineNumber;              
+        
+              //The Value val
+        // strcpy(node->val->fileName, key->fileName);
+        // node->val->fileName = key->fileName;
+        // node->val->tuple = key->tuple;
+        // node->val->datatype = key->datatype;
+        // strcpy(node->val->fileName, key->fileName);
+
         node->left = NULL;
         node->right = NULL;
         node->height = 1; // new node is initially
         // added at leaf 
         return(node);
     }
+
+    // Node<T>* buildFromFile(Value<T> val)
+    // {
+    //     Node<T>* node = new Node<T>;
+    //     node->key = val.tuple;
+    //     node->val->Entries = val.Entries;
+    //     // node->val->fileName = key->fileName;
+    //     node->val->insert(val.fileName, val.lineNumber[0], val.tuple);
+
+    //     // node->val->lineNumber = key->lineNumber;              
+
+    //     //The Value val
+    //     // strcpy(node->val->fileName, key->fileName);
+    //     // node->val->fileName = key->fileName;
+    //     // node->val->tuple = key->tuple;
+    //     // node->val->datatype = key->datatype;
+    //     // strcpy(node->val->fileName, key->fileName);
+
+    //     node->left = NULL;
+    //     node->right = NULL;
+    //     node->height = 1; // new node is initially
+    //     // added at leaf 
+    //     return(node);
+
+    // }
 
     Node<T>* rightRotate(Node<T>* y)
     {
@@ -138,7 +176,15 @@ public:
         else if (key > node->key)
             node->right = insertNode(node->right, key);
         else // Equal keys not allowed 
+        {
+            node->val->duplicates(key.Entries,key.fileName, key.lineNumber, key.tuple); 
+            // node->val->print();
             return node;
+
+
+            // return(newNode(&key));
+            
+        }
 
 
         node->height = 1 + Maximum(height(node->left),
@@ -166,6 +212,7 @@ public:
             node->right = rightRotate(node->right);
             return leftRotate(node);
         }
+
         return node;
     }
 
@@ -282,7 +329,8 @@ public:
         if (root == NULL)
             return;
         InOrderTraversal(root->left);
-        cout << root->key << " ";
+        // cout << root->key << " ";
+        root->val->print();
         InOrderTraversal(root->right);
     }
 
