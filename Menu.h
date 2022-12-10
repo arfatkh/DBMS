@@ -192,6 +192,16 @@ void DeleteMenu()
         case 2:
             pointDelete("year");
             break;
+        case 3:
+            pointDelete("deaths");
+            break;
+        case 4:
+            pointDelete("133cause");
+            break;
+        case 5:
+            pointDelete("cause");
+            break;
+        
         case 6:
             pointDelete("state");
             break;
@@ -473,9 +483,315 @@ void pointDelete(string feild)
         }
         
     }
+    else if(feild=="deaths")
+    {
+        if(TreeHistory.AVL_Deaths)
+        {   
+             //LOAD THE TREE
+                AVL_Deaths = new AVLtree<int>;
+                LoadAVLTree(AVL_Deaths,"./TreeData/AVL_Deaths.bin");
+
+            
+            int key;
+            do
+            {
+                key = getIntChoice("[-1 to quit] Enter the Deaths to delete: ", -1, 1000000);
+                if(key==-1)
+                    break;
+
+                Value<int> ValKey;
+                ValKey.tuple = key;
+
+                Node<int>* result = AVL_Deaths->Search(AVL_Deaths->root,ValKey);
+
+                if(result)
+                {
+                    cout<<prntGreen;
+                    cout<<" ============= Deaths Found ==========="<<endl;
+                    result->val->print();
+                
+                    cout<<prntClr;
+                    cout<<"Do you want to delete this record? (y/n): ";
+                    char ch;
+                    cin>>ch;
+                    if(ch=='y')
+                    {
+                        for(int i=0;i<result->val->Entries ;i++)
+                        {
+                            DeleteRowFromCSV(result->val->fileName[i],result->val->lineNumber[i]);
+                            
+                        }
+
+                        delete AVL_Deaths;
+                        AVL_Deaths = new AVLtree<int>;
+                        Read_all_files_AVL(AVL_Deaths,"deaths");
+                        cout<<prntGreen;
+                        cout<<"Record Deleted"<<endl;
+                        cout<<prntClr;
+                        pause();
+                    }
+                    else
+                    {
+                        cout<<prntRed;
+                        cout<<"Record not deleted"<<endl;
+                        cout<<prntClr;
+                        pause();
+                    }
+                    
+                }
+                else
+                {
+                    cout<<prntRed;
+                    cout<<" ============= Deaths Not Found ==========="<<endl;
+                    cout<<prntClr;
+                    pause();
+                }
+                
+            } while (key!=-1);
+            
+             saveAVLTree(AVL_Deaths,"./TreeData/AVL_Deaths.bin");
+        }
+        else
+        {
+            cout<<prntRed;
+            cout<<" ============= Deaths Tree Not Found ==========="<<endl;
+            cout<<prntClr;
+            pause();
+        }
+        
+    }
+    else if(feild=="cause")
+    {
+        if(TreeHistory.AVL_CauseName)
+        {   
+             //LOAD THE TREE
+                AVL_CauseName = new AVLtree<string>;
+                LoadAVLTree(AVL_CauseName,"./TreeData/AVL_CauseName.bin");
+
+            
+            string key;
+            do
+            {
+                key = getStringChoice("[-1 to quit] Enter the Cause to delete: ");
+                if(key=="-1")
+                    break;
+
+                Value<string> ValKey;
+                ValKey.tuple = key;
+
+                Node<string>* result = AVL_CauseName->Search(AVL_CauseName->root,ValKey);
+
+                if(result)
+                {
+                    cout<<prntGreen;
+                    cout<<" ============= Cause Found ==========="<<endl;
+                    result->val->print();
+                
+                    cout<<prntClr;
+                    cout<<"Do you want to delete this record? (y/n): ";
+                    char ch;
+                    cin>>ch;
+                    if(ch=='y')
+                    {
+                        for(int i=0;i<result->val->Entries ;i++)
+                        {
+                            DeleteRowFromCSV(result->val->fileName[i],result->val->lineNumber[i]);
+                            
+                        }
+
+                        delete AVL_CauseName;
+                        AVL_CauseName = new AVLtree<string>;
+                        Read_all_files_AVL(AVL_CauseName,"cause");
+                        cout<<prntGreen;
+                        cout<<"Record Deleted"<<endl;
+                        cout<<prntClr;
+                        pause();
+                    }
+                    else
+                    {
+                        cout<<prntRed;
+                        cout<<"Record not deleted"<<endl;
+                        cout<<prntClr;
+                        pause();
+                    }
+                    
+                }
+                else
+                {
+                    cout<<prntRed;
+                    cout<<" ============= Cause Not Found ==========="<<endl;
+                    cout<<prntClr;
+                    pause();
+                }
+                
+            } while (key!="-1");
+            
+             saveAVLTree(AVL_CauseName,"./TreeData/AVL_Cause.bin");
+        }
+        else
+        {
+            cout<<prntRed;
+            cout<<" ============= Cause Tree Not Found ==========="<<endl;
+            cout<<prntClr;
+            pause();
+        }
+        
+    }
+    else if(feild=="133cause")
+    {
+        if(TreeHistory.AVL_CauseNameString)
+        {   
+             //LOAD THE TREE
+                AVL_CauseNameString = new AVLtree<string>;
+                LoadAVLTree(AVL_CauseNameString,"./TreeData/AVL_CauseNameString.bin");
+
+            
+            string key;
+            do
+            {
+                key = getStringChoice("[-1 to quit] Enter the 133 Cause to delete: ");
+                if(key=="-1")
+                    break;
+
+                Value<string> ValKey;
+                ValKey.tuple = key;
+
+                Node<string>* result = AVL_CauseNameString->Search(AVL_CauseNameString->root,ValKey);
+
+                if(result)
+                {
+                    cout<<prntGreen;
+                    cout<<" ============= 133 Cause Found ==========="<<endl;
+                    result->val->print();
+                
+                    cout<<prntClr;
+                    cout<<"Do you want to delete this record? (y/n): ";
+                    char ch;
+                    cin>>ch;
+                    if(ch=='y')
+                    {
+                        for(int i=0;i<result->val->Entries ;i++)
+                        {
+                            DeleteRowFromCSV(result->val->fileName[i],result->val->lineNumber[i]);
+                            
+                        }
+
+                        delete AVL_CauseNameString;
+                        AVL_CauseNameString = new AVLtree<string>;
+                        Read_all_files_AVL(AVL_CauseNameString,"133cause");
+                        cout<<prntGreen;
+                        cout<<"Record Deleted"<<endl;
+                        cout<<prntClr;
+                        pause();
+                    }
+                    else
+                    {
+                        cout<<prntRed;
+                        cout<<"Record not deleted"<<endl;
+                        cout<<prntClr;
+                        pause();
+                    }
+                    
+                }
+                else
+                {
+                    cout<<prntRed;
+                    cout<<" ============= 133 Cause Not Found ==========="<<endl;
+                    cout<<prntClr;
+                    pause();
+                }
+                
+            } while (key!="-1");
+            
+             saveAVLTree(AVL_CauseNameString,"./TreeData/AVL_133Cause.bin");
+        }
+        else
+        {
+            cout<<prntRed;
+            cout<<" ============= 133 Cause Tree Not Found ==========="<<endl;
+            cout<<prntClr;
+            pause();
+        }
+        
+    }
+    else if(feild=="agedeathrates")
+    {
+        if(TreeHistory.AVL_AgeAdjustedDeathRate)
+        {   
+                //LOAD THE TREE
+                    AVL_AgeAdjustedDeathRate = new AVLtree<float>;
+                    LoadAVLTree(AVL_AgeAdjustedDeathRate,"./TreeData/AVL_AgeAdjustedDeathRate.bin");
+    
+                
+                float key;
+                do
+                {
+                    key = getFloatChoice("[-1 to quit] Enter the Age Adjusted Death Rate to delete: ",-1,1000);
+                    if(key==-1)
+                        break;
+    
+                    Value<float> ValKey;
+                    ValKey.tuple = key;
+    
+                    Node<float>* result = AVL_AgeAdjustedDeathRate->Search(AVL_AgeAdjustedDeathRate->root,ValKey);
+    
+                    if(result)
+                    {
+                        cout<<prntGreen;
+                        cout<<" ============= Age Adjusted Death Rate Found ==========="<<endl;
+                        result->val->print();
+                    
+                        cout<<prntClr;
+                        cout<<"Do you want to delete this record? (y/n): ";
+                        char ch;
+                        cin>>ch;
+                        if(ch=='y')
+                        {
+                            for(int i=0;i<result->val->Entries ;i++)
+                            {
+                                DeleteRowFromCSV(result->val->fileName[i],result->val->lineNumber[i]);
+                                
+                            }
+    
+                            delete AVL_AgeAdjustedDeathRate;
+                            AVL_AgeAdjustedDeathRate = new AVLtree<float>;
+                            Read_all_files_AVL(AVL_AgeAdjustedDeathRate,"agedeathrates");
+                            cout<<prntGreen;
+                            cout<<"Record Deleted"<<endl;
+                            cout<<prntClr;
+                            pause();
+                        }
+                        else
+                        {
+                            cout<<prntRed;
+                            cout<<"Record not deleted"<<endl;
+                            cout<<prntClr;
+                            pause();
+                        }
+                        
+                    }
+                    else
+                    {
+                        cout<<prntRed;
+                        cout<<" ============= Age Adjusted Death Rate Not Found ==========="<<endl;
+                        cout<<prntClr;
+                        pause();
+                    }
+                    
+                } while (key!=-1);
+                
+                saveAVLTree(AVL_AgeAdjustedDeathRate,"./TreeData/AVL_AgeAdjustedDeathRate.bin");
+            }
+            else
+            {
+                cout<<prntRed;
+                cout<<" ============= Age Adjusted Death Rate Tree Not Found ==========="<<endl;
+                cout<<prntClr;
+                pause();
+        }
 
 
-
+    }
 
    
 }
