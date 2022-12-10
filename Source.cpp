@@ -86,15 +86,27 @@ int main() {
 	// if (field == "state") return 4;
 	// if (field == "deaths") return 5;
 	// if (field == "agedeathrate") return 6;
-// 	typedef int Choosen;
 
 
-// 	// typedef Choosen
-// 	string field = "id";
+	// typedef string Choosen;
+	// string field = "state";
 
-// 	AVLtree<Choosen>* test= new AVLtree<Choosen>;
-// 	// Read_all_field_AVL<int>(test,field, filename);
-// 	Read_all_files_AVL<Choosen>(test, field);
+	// AVLtree<Choosen>* test= new AVLtree<Choosen>;
+	// // // Read_all_field_AVL<int>(test,field, filename);
+	// Read_all_files_AVL<Choosen>(test, field);
+
+
+	// Value<Choosen> some;
+	// some.tuple = "Washington";
+
+	// Node<Choosen>* result =  test->Search(test->root,some);
+	// test->root = test->remove(test->root, some);
+
+	// if(result!=NULL)
+	// 	result->val->print(); 
+	// else
+	// 	cout << "Not found" << endl;
+
 
 
 // 	// saveAVLTree(test, "avlString.dat");
@@ -105,10 +117,12 @@ int main() {
 // 	// printTree(test->root, nullptr, false);
 
 // // 
-// 	test->InOrderTraversal(test->root);
+	// test->InOrderTraversal(test->root);
 
 	MenuMain();
+	// printRecordFromFile("./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_1.csv",43);
 
+	// DeleteRowFromCSV("./datafiles/100test.csv", 4);
 
 	return 0;
 

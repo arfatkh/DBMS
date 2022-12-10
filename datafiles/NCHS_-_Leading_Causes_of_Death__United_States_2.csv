@@ -907,24 +907,24 @@ ID,Year,113 Cause Name,Cause Name,State,Deaths,Age-adjusted Death Rate
 1921,2001,Alzheimer's disease (G30),Alzheimer's disease,Wyoming,114,25.4
 1922,2000,Alzheimer's disease (G30),Alzheimer's disease,Wyoming,102,23.1
 1923,1999,Alzheimer's disease (G30),Alzheimer's disease,Wyoming,103,23.9
-1924,2016,Malignant neoplasms (C00-C97),Cancer,Alabama,10419,174
-1925,2015,Malignant neoplasms (C00-C97),Cancer,Alabama,10354,175.6
-1926,2014,Malignant neoplasms (C00-C97),Cancer,Alabama,10286,177.6
-1927,2013,Malignant neoplasms (C00-C97),Cancer,Alabama,10328,182.2
-1928,2012,Malignant neoplasms (C00-C97),Cancer,Alabama,10276,185.2
-1929,2011,Malignant neoplasms (C00-C97),Cancer,Alabama,10233,187.8
-1930,2010,Malignant neoplasms (C00-C97),Cancer,Alabama,10196,191.7
-1931,2009,Malignant neoplasms (C00-C97),Cancer,Alabama,10289,196.3
-1932,2008,Malignant neoplasms (C00-C97),Cancer,Alabama,10182,197.5
-1933,2007,Malignant neoplasms (C00-C97),Cancer,Alabama,10025,198.7
-1934,2006,Malignant neoplasms (C00-C97),Cancer,Alabama,9899,199.4
-1935,2005,Malignant neoplasms (C00-C97),Cancer,Alabama,9913,204.4
-1936,2004,Malignant neoplasms (C00-C97),Cancer,Alabama,9756,204.5
-1937,2003,Malignant neoplasms (C00-C97),Cancer,Alabama,9812,208.2
-1938,2002,Malignant neoplasms (C00-C97),Cancer,Alabama,9698,208.3
-1939,2001,Malignant neoplasms (C00-C97),Cancer,Alabama,9801,213
-1940,2000,Malignant neoplasms (C00-C97),Cancer,Alabama,9807,215.4
-1941,1999,Malignant neoplasms (C00-C97),Cancer,Alabama,9506,210.9
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
 1942,2016,Malignant neoplasms (C00-C97),Cancer,Alaska,995,158.7
 1943,2015,Malignant neoplasms (C00-C97),Cancer,Alaska,978,159.8
 1944,2014,Malignant neoplasms (C00-C97),Cancer,Alaska,972,164.2

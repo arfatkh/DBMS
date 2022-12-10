@@ -492,24 +492,24 @@ ID,Year,113 Cause Name,Cause Name,State,Deaths,Age-adjusted Death Rate
 6601,2001,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Wyoming,112,24.5
 6602,2000,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Wyoming,126,28.3
 6603,1999,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Wyoming,130,30
-6604,2016,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alabama,1012,17.4
-6605,2015,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alabama,1040,18.4
-6606,2014,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alabama,1011,18.2
-6607,2013,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alabama,1057,19.3
-6608,2012,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alabama,1035,19.4
-6609,2011,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alabama,1047,20
-6610,2010,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alabama,1184,23.1
-6611,2009,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alabama,1180,23.4
-6612,2008,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alabama,1107,22.3
-6613,2007,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alabama,1051,21.3
-6614,2006,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alabama,1104,23
-6615,2005,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alabama,1036,22.1
-6616,2004,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alabama,1049,22.8
-6617,2003,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alabama,1062,23.2
-6618,2002,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alabama,1032,22.8
-6619,2001,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alabama,974,21.7
-6620,2000,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alabama,939,21.1
-6621,1999,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alabama,979,22.2
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
 6622,2016,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alaska,53,10
 6623,2015,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alaska,50,10
 6624,2014,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alaska,45,10.1

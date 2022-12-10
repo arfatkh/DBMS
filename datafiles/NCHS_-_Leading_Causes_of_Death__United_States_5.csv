@@ -690,24 +690,24 @@ ID,Year,113 Cause Name,Cause Name,State,Deaths,Age-adjusted Death Rate
 4729,2001,Diabetes mellitus (E10-E14),Diabetes,Wyoming,120,25.7
 4730,2000,Diabetes mellitus (E10-E14),Diabetes,Wyoming,111,24.1
 4731,1999,Diabetes mellitus (E10-E14),Diabetes,Wyoming,135,29.8
-4732,2016,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Alabama,12832,222.5
-4733,2015,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Alabama,12981,229.7
-4734,2014,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Alabama,12461,224
-4735,2013,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Alabama,12472,228.4
-4736,2012,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Alabama,12036,225.1
-4737,2011,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Alabama,11942,228.7
-4738,2010,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Alabama,12083,236
-4739,2009,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Alabama,12021,238
-4740,2008,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Alabama,12074,243.3
-4741,2007,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Alabama,11926,245
-4742,2006,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Alabama,12583,263
-4743,2005,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Alabama,12869,274.5
-4744,2004,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Alabama,12774,278.1
-4745,2003,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Alabama,13150,288.5
-4746,2002,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Alabama,13197,291.3
-4747,2001,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Alabama,13207,292.7
-4748,2000,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Alabama,13406,299.5
-4749,1999,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Alabama,13419,303
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
 4750,2016,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Alaska,831,141
 4751,2015,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Alaska,846,154.1
 4752,2014,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Alaska,782,146.6

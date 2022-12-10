@@ -177,7 +177,7 @@ bool Read_all_field_AVL(AVLtree<T>* avltree,string  field, string filename) {
 		// cout << line << endl;
 
 		Value<T> v = StringToValue<T>(line, fieldIndex, lineNumber, filename);
-		
+		// v->print();
 		
 		//Insert the value into the tree
 		avltree->root = avltree->insertNode(avltree->root, v);
@@ -206,18 +206,18 @@ bool Read_all_files_AVL(AVLtree<T>* avltree, string field) {
 	
 
 	// cout<<"Current directory: "<<prntRed<<fs::current_path()<<prntClr<<endl;
-	string DataFileFolder="./datafiles/";
+	// string DataFileFolder="./datafiles/";
 
-	Read_all_field_AVL<T>(avltree, field, "datafiles/NCHS_-_Leading_Causes_of_Death__United_States_1.csv");
-	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_2.csv");
-	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_3.csv");
-	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_4.csv");
-	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_5.csv");
-	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_6.csv");
-	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_7.csv");
-	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_8.csv");
-	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_9.csv");
-	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_10.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_1.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_2.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_3.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_4.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_5.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_6.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_7.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_8.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_9.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_10.csv");
 
 	return true;
 
@@ -329,3 +329,76 @@ void LoadAVLTree(AVLtree<T>* avltree, string filename) {
 
 }
 
+
+void printRecordFromFile(string filename,int LineNumber)
+{
+    ifstream file;
+    file.open(filename);
+    string line;
+    int count = 1;
+    while (getline(file, line))
+    {
+        count++;
+        if(count==LineNumber)
+        {
+           
+			cout<<line<<endl;
+			break;
+        }
+    }
+    file.close();
+}
+
+
+
+//========================================================================================================
+void DeleteRowFromCSV(string filename, int LineNumber)
+{
+	
+	ifstream file;
+	file.open(filename);
+	if(!file.is_open())
+	{
+		cout<<prntRed;
+		cout<<"Error opening file"<<endl;
+		cout<<prntClr;
+		return;
+	}
+
+
+	string line;
+	int count = 0;
+	string temp = "";
+	while (getline(file, line))
+	{
+		count++;
+		if(count==LineNumber)
+		{
+			temp += "0,0 , , , , , 0,0.0 \n"; //Replace the line with this dummy line
+			continue;
+		}
+		temp += line + "\n";
+	}
+
+	file.close();
+	ofstream file2;
+	file2.open(filename);
+	if (!file2.is_open())
+	{
+		cout<<prntRed;
+		cout<<"Error opening file"<<endl;
+		cout<<prntClr;
+		return;
+	}
+	
+
+
+	file2 << temp;
+	file2.close();
+
+
+	cout<<prntGreen;
+	cout<<"Row ["<<LineNumber<<"] ["<<filename<<"] deleted successfully"<<endl;
+	cout<<prntClr;
+
+}

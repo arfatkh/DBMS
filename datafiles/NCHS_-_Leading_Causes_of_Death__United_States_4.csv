@@ -678,24 +678,24 @@ ID,Year,113 Cause Name,Cause Name,State,Deaths,Age-adjusted Death Rate
 3793,2001,Chronic lower respiratory diseases (J40-J47),CLRD,Wyoming,270,57.9
 3794,2000,Chronic lower respiratory diseases (J40-J47),CLRD,Wyoming,283,62.4
 3795,1999,Chronic lower respiratory diseases (J40-J47),CLRD,Wyoming,338,75.6
-3796,2016,Diabetes mellitus (E10-E14),Diabetes,Alabama,1183,20.1
-3797,2015,Diabetes mellitus (E10-E14),Diabetes,Alabama,1255,21.7
-3798,2014,Diabetes mellitus (E10-E14),Diabetes,Alabama,1281,22.8
-3799,2013,Diabetes mellitus (E10-E14),Diabetes,Alabama,1349,24.3
-3800,2012,Diabetes mellitus (E10-E14),Diabetes,Alabama,1300,23.9
-3801,2011,Diabetes mellitus (E10-E14),Diabetes,Alabama,1278,23.9
-3802,2010,Diabetes mellitus (E10-E14),Diabetes,Alabama,1302,25
-3803,2009,Diabetes mellitus (E10-E14),Diabetes,Alabama,1259,24.4
-3804,2008,Diabetes mellitus (E10-E14),Diabetes,Alabama,1386,27.2
-3805,2007,Diabetes mellitus (E10-E14),Diabetes,Alabama,1313,26.4
-3806,2006,Diabetes mellitus (E10-E14),Diabetes,Alabama,1453,29.8
-3807,2005,Diabetes mellitus (E10-E14),Diabetes,Alabama,1429,29.9
-3808,2004,Diabetes mellitus (E10-E14),Diabetes,Alabama,1449,30.8
-3809,2003,Diabetes mellitus (E10-E14),Diabetes,Alabama,1414,30.4
-3810,2002,Diabetes mellitus (E10-E14),Diabetes,Alabama,1486,32.3
-3811,2001,Diabetes mellitus (E10-E14),Diabetes,Alabama,1344,29.6
-3812,2000,Diabetes mellitus (E10-E14),Diabetes,Alabama,1321,29.3
-3813,1999,Diabetes mellitus (E10-E14),Diabetes,Alabama,1341,30
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
 3814,2016,Diabetes mellitus (E10-E14),Diabetes,Alaska,124,19.3
 3815,2015,Diabetes mellitus (E10-E14),Diabetes,Alaska,142,23.9
 3816,2014,Diabetes mellitus (E10-E14),Diabetes,Alaska,113,19.4

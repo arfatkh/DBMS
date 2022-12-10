@@ -64,24 +64,24 @@ ID,Year,113 Cause Name,Cause Name,State,Deaths,Age-adjusted Death Rate
 8473,2001,Cerebrovascular diseases (I60-I69),Stroke,Wyoming,260,56.7
 8474,2000,Cerebrovascular diseases (I60-I69),Stroke,Wyoming,260,58.3
 8475,1999,Cerebrovascular diseases (I60-I69),Stroke,Wyoming,265,60.7
-8476,2016,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alabama,788,15.7
-8477,2015,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alabama,750,14.9
-8478,2014,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alabama,715,14.5
-8479,2013,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alabama,721,14.4
-8480,2012,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alabama,724,14.7
-8481,2011,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alabama,654,13.2
-8482,2010,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alabama,679,14
-8483,2009,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alabama,673,13.7
-8484,2008,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alabama,604,12.6
-8485,2007,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alabama,592,12.4
-8486,2006,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alabama,580,12.4
-8487,2005,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alabama,535,11.5
-8488,2004,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alabama,541,11.7
-8489,2003,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alabama,521,11.4
-8490,2002,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alabama,514,11.5
-8491,2001,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alabama,512,11.4
-8492,2000,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alabama,583,13.1
-8493,1999,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alabama,555,12.5
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
 8494,2016,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alaska,193,25.8
 8495,2015,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alaska,201,26.9
 8496,2014,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alaska,167,22.1
@@ -1000,23 +1000,23 @@ ID,Year,113 Cause Name,Cause Name,State,Deaths,Age-adjusted Death Rate
 9409,2001,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Wyoming,83,16.4
 9410,2000,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Wyoming,83,16.8
 9411,1999,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Wyoming,98,20.3
-9412,2015,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alabama,2552,50.9
-9413,2014,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alabama,2463,49.3
-9414,2013,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alabama,2329,47.2
-9415,2012,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alabama,2283,46.6
-9416,2011,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alabama,2662,54.4
-9417,2010,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alabama,2394,49.6
-9418,2009,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alabama,2351,49
-9419,2008,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alabama,2509,52.5
-9420,2007,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alabama,2542,53.8
-9421,2006,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alabama,2506,54
-9422,2005,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alabama,2395,51.9
-9423,2004,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alabama,2403,53
-9424,2003,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alabama,2179,48.3
-9425,2002,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alabama,2228,49.6
-9426,2001,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alabama,2211,49.5
-9427,2000,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alabama,2093,47
-9428,1999,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alabama,2313,52.2
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
+0,0 , , , , , 0,0.0 
 9429,2015,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alaska,388,57.9
 9430,2014,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alaska,379,55
 9431,2013,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alaska,353,52.5
