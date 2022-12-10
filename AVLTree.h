@@ -66,7 +66,17 @@ public:
     {
         Node<T>* node = new Node<T>;
         node->key = key->tuple;
-        node->val = key;                    //The Value val
+        node->val->insert(key->fileName, key->lineNumber[0], key->tuple);
+
+        // node->val->lineNumber = key->lineNumber;              
+        
+              //The Value val
+        // strcpy(node->val->fileName, key->fileName);
+        // node->val->fileName = key->fileName;
+        // node->val->tuple = key->tuple;
+        // node->val->datatype = key->datatype;
+        // strcpy(node->val->fileName, key->fileName);
+
         node->left = NULL;
         node->right = NULL;
         node->height = 1; // new node is initially
@@ -138,7 +148,15 @@ public:
         else if (key > node->key)
             node->right = insertNode(node->right, key);
         else // Equal keys not allowed 
+        {
+            node->val->duplicates(key.fileName, key.lineNumber[0], key.tuple); 
+            node->val->print();
             return node;
+
+
+            // return(newNode(&key));
+            
+        }
 
 
         node->height = 1 + Maximum(height(node->left),
@@ -166,6 +184,7 @@ public:
             node->right = rightRotate(node->right);
             return leftRotate(node);
         }
+
         return node;
     }
 
@@ -282,7 +301,8 @@ public:
         if (root == NULL)
             return;
         InOrderTraversal(root->left);
-        cout << root->key << " ";
+        // cout << root->key << " ";
+        root->val->print();
         InOrderTraversal(root->right);
     }
 

@@ -7,6 +7,73 @@
 using namespace std;
 
 
+
+
+struct Trunk
+{
+	Trunk *prev;
+	string str;
+
+	Trunk(Trunk *prev, string str)
+	{
+		this->prev = prev;
+		this->str = str;
+	}
+};
+
+// Helper function to print branches of the binary tree
+void showTrunks(Trunk *p)
+{
+	if (p == nullptr) {
+		return;
+	}
+
+	showTrunks(p->prev);
+	cout << p->str;
+}
+
+void printTree(Node<int>* root, Trunk *prev, bool isLeft)
+{
+	if (root == nullptr) {
+		return;
+	}
+
+	string prev_str = "    ";
+	Trunk *trunk = new Trunk(prev, prev_str);
+
+	printTree(root->right, trunk, true);
+
+	if (!prev) {
+		trunk->str = "———";
+	}
+	else if (isLeft)
+	{
+		trunk->str = ".———";
+		prev_str = "   |";
+	}
+	else {
+		trunk->str = "`———";
+		prev->str = prev_str;
+	}
+
+	showTrunks(trunk);
+	cout << " " << root->key << endl;
+
+	if (prev) {
+		prev->str = prev_str;
+	}
+	trunk->str = "   |";
+
+	printTree(root->left, trunk, false);
+}
+
+
+
+
+
+
+
+
 int main() {
 	
 	/*int c;
@@ -67,31 +134,24 @@ int main() {
 	//tree.levelorder_newline();
 	////tree.levelorder_newline(tree.root);
 
-	string field = "deaths";
 	// string filename = "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_1.csv";
 	
 	// typedef Choosen
+	string field = "state";
 
-	AVLtree<int>* test= new AVLtree<int>;
+	AVLtree<string>* test= new AVLtree<string>;
 	// Read_all_field_AVL<int>(test,field, filename);
-	Read_all_files_AVL<int>(test, field);
+	// Read_all_files_AVL<string>(test, field);
 
 
-	// Value<string> some;
-	// some.insert("A", 1, "AIDS");
+	// saveAVLTree(test, "avlString.dat");
+	
+	LoadAVLTree<string>(test, "avlString.dat");
 
 
-	// test->root = test->insertNode(test->root,some);
+	// printTree(test->root, nullptr, false);
 
-	// Value<string> some1;
-	// some1.insert("B", 1, "B");
-
-
-
-	saveAVLTree(test, "avl.bat");
-
-
-
+// 
 	// test->InOrderTraversal(test->root);
 
 
