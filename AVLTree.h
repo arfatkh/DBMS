@@ -227,7 +227,7 @@ public:
 
         return current;
     }
-    Node<T>* remove(Node<T>* root, int key)
+    Node<T>* remove(Node<T>* root, Value<T> key)
     {
 
         // STEP 1: PERFORM STANDARD BST DELETE 
@@ -333,6 +333,22 @@ public:
         root->val->print();
         InOrderTraversal(root->right);
     }
+
+    //Searching key and returning Node<T>
+    Node<T>* Search(Value<T> key, Node<T>* root) {
+        //finding key in tree
+        // STEP 1: PERFORM STANDARD BST DELETE 
+        if (root == NULL)
+            return root;
+        if (key < root->key)
+            root->left = remove(root->left, key);
+        else if (key > root->key)
+            root->right = remove(root->right, key);
+        else
+            return root;
+    }
+
+
 
     //BFS traversal
 
