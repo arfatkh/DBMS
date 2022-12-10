@@ -146,11 +146,11 @@ int main() {
 	// if (field == "state") return 4;
 	// if (field == "deaths") return 5;
 	// if (field == "agedeathrate") return 6;
-	typedef string Choosen;
+	typedef int Choosen;
 
 
 	// typedef Choosen
-	string field = "state";
+	string field = "id";
 
 	AVLtree<Choosen>* test= new AVLtree<Choosen>;
 	// Read_all_field_AVL<int>(test,field, filename);

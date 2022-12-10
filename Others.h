@@ -197,7 +197,7 @@ public:
 		{
 			cout<<"Entry Number: "<<i+1<<endl;
 			cout << "Line Number: " << lineNumber[i] << endl;
-			cout << "File Name: " << fileName << endl;
+			cout << "File Name: " << fileName[i] << endl;
 			cout << "Tuple[KEY]: " << tuple << endl;
 		}
 		
