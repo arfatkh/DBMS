@@ -736,24 +736,24 @@ ID,Year,113 Cause Name,Cause Name,State,Deaths,Age-adjusted Death Rate
 2785,2001,Malignant neoplasms (C00-C97),Cancer,Virginia,13345,200.5
 2786,2000,Malignant neoplasms (C00-C97),Cancer,Virginia,13528,208.6
 2787,1999,Malignant neoplasms (C00-C97),Cancer,Virginia,13365,209.1
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
+2788,2016,Malignant neoplasms (C00-C97),Cancer,Washington,12594,150.9
+2789,2015,Malignant neoplasms (C00-C97),Cancer,Washington,12687,156.4
+2790,2014,Malignant neoplasms (C00-C97),Cancer,Washington,12205,155.5
+2791,2013,Malignant neoplasms (C00-C97),Cancer,Washington,11928,156.1
+2792,2012,Malignant neoplasms (C00-C97),Cancer,Washington,11952,161.4
+2793,2011,Malignant neoplasms (C00-C97),Cancer,Washington,12002,166.1
+2794,2010,Malignant neoplasms (C00-C97),Cancer,Washington,11874,170.5
+2795,2009,Malignant neoplasms (C00-C97),Cancer,Washington,11922,174.9
+2796,2008,Malignant neoplasms (C00-C97),Cancer,Washington,11618,175.5
+2797,2007,Malignant neoplasms (C00-C97),Cancer,Washington,11568,179
+2798,2006,Malignant neoplasms (C00-C97),Cancer,Washington,11055,175.3
+2799,2005,Malignant neoplasms (C00-C97),Cancer,Washington,11048,181
+2800,2004,Malignant neoplasms (C00-C97),Cancer,Washington,10989,184.6
+2801,2003,Malignant neoplasms (C00-C97),Cancer,Washington,11064,190.4
+2802,2002,Malignant neoplasms (C00-C97),Cancer,Washington,10858,190.6
+2803,2001,Malignant neoplasms (C00-C97),Cancer,Washington,10802,194.2
+2804,2000,Malignant neoplasms (C00-C97),Cancer,Washington,10668,195.8
+2805,1999,Malignant neoplasms (C00-C97),Cancer,Washington,10653,198.3
 2806,2016,Malignant neoplasms (C00-C97),Cancer,West Virginia,4659,182.2
 2807,2015,Malignant neoplasms (C00-C97),Cancer,West Virginia,4839,190.4
 2808,2014,Malignant neoplasms (C00-C97),Cancer,West Virginia,4880,195.1
@@ -808,24 +808,24 @@ ID,Year,113 Cause Name,Cause Name,State,Deaths,Age-adjusted Death Rate
 2857,2001,Malignant neoplasms (C00-C97),Cancer,Wyoming,923,194
 2858,2000,Malignant neoplasms (C00-C97),Cancer,Wyoming,868,185.5
 2859,1999,Malignant neoplasms (C00-C97),Cancer,Wyoming,899,195.1
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
-0,0, , , ,0,0.0
+2860,2016,Chronic lower respiratory diseases (J40-J47),CLRD,Alabama,3326,56.2
+2861,2015,Chronic lower respiratory diseases (J40-J47),CLRD,Alabama,3279,56.4
+2862,2014,Chronic lower respiratory diseases (J40-J47),CLRD,Alabama,3050,53.6
+2863,2013,Chronic lower respiratory diseases (J40-J47),CLRD,Alabama,3043,54.8
+2864,2012,Chronic lower respiratory diseases (J40-J47),CLRD,Alabama,3015,55.2
+2865,2011,Chronic lower respiratory diseases (J40-J47),CLRD,Alabama,2912,55.2
+2866,2010,Chronic lower respiratory diseases (J40-J47),CLRD,Alabama,2866,55.4
+2867,2009,Chronic lower respiratory diseases (J40-J47),CLRD,Alabama,2770,54.2
+2868,2008,Chronic lower respiratory diseases (J40-J47),CLRD,Alabama,2733,54.2
+2869,2007,Chronic lower respiratory diseases (J40-J47),CLRD,Alabama,2530,51.3
+2870,2006,Chronic lower respiratory diseases (J40-J47),CLRD,Alabama,2309,47.6
+2871,2005,Chronic lower respiratory diseases (J40-J47),CLRD,Alabama,2382,50.1
+2872,2004,Chronic lower respiratory diseases (J40-J47),CLRD,Alabama,2361,50.2
+2873,2003,Chronic lower respiratory diseases (J40-J47),CLRD,Alabama,2434,52.4
+2874,2002,Chronic lower respiratory diseases (J40-J47),CLRD,Alabama,2328,50.7
+2875,2001,Chronic lower respiratory diseases (J40-J47),CLRD,Alabama,2204,48.3
+2876,2000,Chronic lower respiratory diseases (J40-J47),CLRD,Alabama,2057,45.5
+2877,1999,Chronic lower respiratory diseases (J40-J47),CLRD,Alabama,2179,48.6
 2878,2016,Chronic lower respiratory diseases (J40-J47),CLRD,Alaska,238,41.5
 2879,2015,Chronic lower respiratory diseases (J40-J47),CLRD,Alaska,204,37.8
 2880,2014,Chronic lower respiratory diseases (J40-J47),CLRD,Alaska,192,38.8

@@ -439,6 +439,8 @@ void UpdateInCSV(int lineNumber, string filename, string field,string oldValue, 
 
 
 
+	ofstream tempFile("Test.txt",ios::out);
+
 
 
 	string line;
@@ -475,9 +477,9 @@ void UpdateInCSV(int lineNumber, string filename, string field,string oldValue, 
 					fieldCount++;
 					if(fieldCount==fieldIndex+1)
 					{
-						cout<<"Feild Count: "<<fieldCount<<endl;
-						cout<<"Feild Index: "<<fieldIndex<<endl;
-						cout<<"oldValue: "<<oldValue<<endl;
+						
+						// cout<<"oldValue: "<<oldValue<<endl;
+						// cout<<"newValue: "<<newValue<<endl;
 
 
 
@@ -506,12 +508,15 @@ void UpdateInCSV(int lineNumber, string filename, string field,string oldValue, 
 
 			cout<<"Temp Line: "<<tempLine<<endl;
 
-			// //Move the file pointer behind to  the size of the line
-			file.seekp(-line.length()-2,ios::cur);
-			file<<tempLine;
+			// // // //Move the file pointer behind to  the size of the line
+			// file.seekp(-line.length(),ios::cur);
+			// // // //Write the new line
+			// file.write("\n",1);
+            
+			
 
-
-
+			// // // //Move the file pointer behind to  the size of the line
+			
 			
 			
 
@@ -524,7 +529,7 @@ void UpdateInCSV(int lineNumber, string filename, string field,string oldValue, 
 
 	}
 	
-
+	file.close();
 	
 	
 }
