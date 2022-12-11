@@ -1,7 +1,7 @@
 #include"AVLTree.h"
 // #include"BTree.h"
-#include"Filehandling.h"
-// #include"RBTree.h"
+// #include"Filehandling.h"
+#include"RBTree.h"
 // #include"Others.h"
 #include "Menu.h"
 using namespace std;
@@ -14,43 +14,55 @@ using namespace std;
 
 
 
-int main() {
-	
-	
+int main()
+{
+	RBTree<int> tree;
+	Value<int> val;
 
-	// typedef string Choosen;
-	// string field = "state";
+	val.insert("22", 22, 22);
+	tree.insert(val);
+	// val.insert("22", 22, 7);
+	// tree.insert(val);
+	val.insert("22", 22, 6);
+	tree.insert(val);
+	val.insert("22", 22, 5);
+	tree.insert(val);
 
-	// AVLtree<Choosen>* test= new AVLtree<Choosen>;
-	// // // Read_all_field_AVL<int>(test,field, filename);
-	// Read_all_files_AVL<Choosen>(test, field);
+	val.insert("24", 24, 3);
+	tree.insert(val);
 
-
-	// Value<Choosen> some;
-	// some.tuple = "Dikhan";
-
-	// Node<Choosen>* result =  test->Search(test->root,some);
-	// // // test->root = test->remove(test->root, some);
-
-	// if(result!=NULL)
-	// 	result->val->print(); 
-	// else
-	// 	cout << "Not found" << endl;
+	val.insert("26", 27, 1);
+	tree.insert(val);
 
 
-	// for(int i=0;i<result->val->Entries;i++)
-	// {
+	val.insert("29", 29, 9);
+	tree.insert(val);
 
-	// UpdateInCSV(result->val->lineNumber[i],result->val->fileName[i], "state", "California", "Dikhan");
-	
-	// }
 
-MenuMain();
 
-	
+	// val.insert("22", 22, 4);
+	// tree.insert(val);
+
+
+	// tree.deleteByVal(val);
+	tree.printInOrder();
+
+	// val.insert("22", 22, 2);
+	// tree.insert(val);
+	// val.insert("22", 22, 1);
+	// tree.insert(val);
+	// tree.printInOrder();
+
+	// cout << "Inorder Traversal of Created Tree\n";
+	// tree.printInOrder();
+
+	// val.insert("22",22,3);
+	// tree.deleteByVal(val);
+	// val.insert("22",22,5);
+	// tree.deleteByVal(val);
+
+	// tree.printInOrder();
 
 
 	return 0;
-
 }
-

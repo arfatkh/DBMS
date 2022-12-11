@@ -186,7 +186,15 @@ public:
 
 
 
-
+	bool operator==(Value<T> obj) {
+		if (tuple == obj.tuple)
+			return true;
+		return false;
+	}
+	bool operator!=(Value<T> obj) {
+		if (tuple == obj.tuple)
+			return false;
+	}
 
 	void operator=(T key) {
 		tuple = key;
@@ -243,6 +251,7 @@ public:
 		
 
 	}
+
 
 	void writeToBinaryFile(ofstream& out) {
 		
