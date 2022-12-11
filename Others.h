@@ -4,6 +4,10 @@
 #include<fstream>
 using namespace std;
 
+// Write String to Data Obj and return it function
+
+
+
 
 /*
 	Data is the field of data
@@ -41,6 +45,42 @@ public:
 		deaths = obj.deaths;
 		deathrate = obj.deathrate;
 	}
+// 	void stringLoadCSV(string line) {
+// 		int index = 0;
+// 		int field = 0;
+
+// 		string value = "";
+// 		while (index < line.length()) {
+
+// 			//Check if the feild data is in quotes [This is for fields that contain commas]
+// 			if (line[index] == '"')
+// 			{
+// 				index++;
+// 				while (line[index] != '"')
+// 				{
+// 					value += line[index];
+// 					index++;
+// 				}
+
+
+
+// 				index++;
+// 			}
+// 			if (line[index]==',')
+// 			{
+
+// 				index++;
+// 			}
+			
+
+
+
+
+// 		}
+
+
+
+
 	~Data() {}
 	//int getID() { return ID; }
 

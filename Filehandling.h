@@ -5,7 +5,7 @@
 #include "AVLtree.h"
 #include "myDataStructures.h"
 #include <filesystem>
-
+#include <sstream>
 namespace fs = std::filesystem;
 
 using namespace std;
@@ -143,9 +143,9 @@ bool Read_all_field_AVL(AVLtree<T>* avltree,string  field, string filename) {
 	int fieldIndex = GetFieldIndex(field);
 
 	if (fieldIndex == -1) {
-		cout<<prntRed;
-		cout << "Invalid field" << endl;
-		cout<<prntClr;
+		// cout<<prntRed;
+		// cout << "Invalid field" << endl;
+		// cout<<prntClr;
 		return false;
 	}
 	
@@ -177,7 +177,7 @@ bool Read_all_field_AVL(AVLtree<T>* avltree,string  field, string filename) {
 		// cout << line << endl;
 
 		Value<T> v = StringToValue<T>(line, fieldIndex, lineNumber, filename);
-		
+		// v->print();
 		
 		//Insert the value into the tree
 		avltree->root = avltree->insertNode(avltree->root, v);
@@ -206,18 +206,18 @@ bool Read_all_files_AVL(AVLtree<T>* avltree, string field) {
 	
 
 	// cout<<"Current directory: "<<prntRed<<fs::current_path()<<prntClr<<endl;
-	string DataFileFolder="./datafiles/";
+	// string DataFileFolder="./datafiles/";
 
-	Read_all_field_AVL<T>(avltree, field, "datafiles/NCHS_-_Leading_Causes_of_Death__United_States_1.csv");
-	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_2.csv");
-	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_3.csv");
-	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_4.csv");
-	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_5.csv");
-	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_6.csv");
-	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_7.csv");
-	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_8.csv");
-	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_9.csv");
-	// Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_10.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_1.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_2.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_3.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_4.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_5.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_6.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_7.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_8.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_9.csv");
+	Read_all_field_AVL<T>(avltree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_10.csv");
 
 	return true;
 
@@ -288,6 +288,7 @@ void LoadAVLTree(AVLtree<T>* avltree, string filename) {
 	if (!file.is_open()) {
 		cout<<prntRed;
 		cout << "Error Opening File ["<<filename<<"]!" << endl;
+		exit(1);
 		cout<<prntClr;
 		return;
 	}
@@ -328,4 +329,222 @@ void LoadAVLTree(AVLtree<T>* avltree, string filename) {
 
 
 }
+
+
+void printRecordFromFile(string filename,int LineNumber)
+{
+    ifstream file;
+    file.open(filename);
+    string line;
+    int count = 1;
+    while (getline(file, line))
+    {
+        count++;
+        if(count==LineNumber)
+        {
+           
+			cout<<line<<endl;
+			break;
+        }
+    }
+    file.close();
+}
+
+
+
+//========================================================================================================
+void DeleteRowFromCSV(string filename, int LineNumber)
+{
+	
+	ifstream file;
+	file.open(filename);
+	if(!file.is_open())
+	{
+		cout<<prntRed;
+		cout<<"Error opening file"<<endl;
+		cout<<prntClr;
+		return;
+	}
+
+
+	string line;
+	int count = 0;
+	string temp = "";
+	while (getline(file, line))
+	{
+		count++;
+		if(count==LineNumber)
+		{
+			temp += "0,0, , , ,0,0.0\n"; //Replace the line with this dummy line
+			continue;
+		}
+		temp += line + "\n";
+	}
+
+	file.close();
+	ofstream file2;
+	file2.open(filename);
+	if (!file2.is_open())
+	{
+		cout<<prntRed;
+		cout<<"Error opening file"<<endl;
+		cout<<prntClr;
+		return;
+	}
+	
+
+
+	file2 << temp;
+	file2.close();
+
+
+	cout<<prntGreen;
+	cout<<"Row ["<<LineNumber<<"] ["<<filename<<"] deleted successfully"<<endl;
+	cout<<prntClr;
+
+}
+
+
+
+
+
+void UpdateInCSV(int lineNumber, string filename, string field,string oldValue, string newValue)
+{
+
+	cout<<"running on file ["<<filename<<"]"<<endl;
+
+	//Considers the first line as the header as 1
+	//Considers the first field as 0
+
+	//if the new value has a comma, then cover it with quotes
+	if(newValue.find(",")!=string::npos)
+	{
+		newValue = "\""+newValue+"\"";
+	}
+
+	// // if the new value has a quote, then cover it with double quotes
+	// if(newValue.find("\"")!=string::npos)
+	// {
+	// 	newValue = "\""+newValue+"\"";
+	// }
+
+
+
+
+	fstream file(filename,ios::in | ios::out);
+	if(!file.is_open())
+	{
+		cout<<prntRed;
+		cout<<"Error opening file"<<endl;
+		cout<<prntClr;
+		return;
+	}
+
+	//MAke a temp file
+	
+	
+	
+	
+
+	ofstream tempFile("./datafiles/temp.csv",ios::out);
+
+
+
+
+	string line;
+	int LineCount = 0;
+	while (getline(file, line))
+	{	
+		
+
+		LineCount++;
+		
+		if(LineCount==lineNumber)
+		{
+			// cout<<"Tell G while reading: "<<file.tellg()<<endl;
+			string tempLine = "";
+			int fieldIndex = GetFieldIndex(field);
+			int fieldCount = 0;
+			int index = 0;
+			//Go to the field while ignoring quotes
+			while (index < line.length())
+			{
+				tempLine += line[index];
+
+				if(line[index]=='"')
+				{
+					index++;
+					tempLine += line[index];
+					while(line[index]!='"')
+					{
+						index++;
+						tempLine += line[index];
+					}
+					index++;
+					tempLine += line[index];
+				}
+
+				else if(line[index]==',')
+				{
+					fieldCount++;
+					if(fieldCount==fieldIndex+1)
+					{
+						
+						// cout<<"oldValue: "<<oldValue<<endl;
+						// cout<<"newValue: "<<newValue<<endl;
+
+
+
+
+						// //Replace the old value with the new value
+						int oldIndex = tempLine.find(oldValue);
+						if(oldIndex==-1)
+						{
+							cout<<prntRed;
+							cout<<"Error: The old value ["<<oldValue<<"] does not exist in the file"<<endl;
+							cout<<prntClr;
+							cout<<tempLine<<endl;
+							return;
+						}
+
+						tempLine.replace(oldIndex,oldValue.length(),newValue);
+						// line= tempLine;
+						// cout<<"Old Index: "<<oldIndex<<endl;
+						// break;
+
+
+					}
+				}
+				index++;
+			}
+
+			tempFile<<tempLine<<endl;
+		}
+		else
+		{
+			tempFile<<line<<endl;
+		}
+		
+
+	
+
+
+
+
+
+	}
+	
+	file.close();
+	tempFile.close();
+	
+	//Remove the original file
+	remove(filename.c_str());
+	//Rename the temp file to the original file
+	rename("./datafiles/temp.csv",filename.c_str());
+
+
+
+	
+}
+
 

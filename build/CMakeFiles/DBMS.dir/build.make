@@ -73,15 +73,15 @@ CMakeFiles/DBMS.dir/Source.cpp.o: CMakeFiles/DBMS.dir/flags.make
 CMakeFiles/DBMS.dir/Source.cpp.o: /Users/arfat/Coding/Fast/DBMS/Source.cpp
 CMakeFiles/DBMS.dir/Source.cpp.o: CMakeFiles/DBMS.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arfat/Coding/Fast/DBMS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DBMS.dir/Source.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DBMS.dir/Source.cpp.o -MF CMakeFiles/DBMS.dir/Source.cpp.o.d -o CMakeFiles/DBMS.dir/Source.cpp.o -c /Users/arfat/Coding/Fast/DBMS/Source.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DBMS.dir/Source.cpp.o -MF CMakeFiles/DBMS.dir/Source.cpp.o.d -o CMakeFiles/DBMS.dir/Source.cpp.o -c /Users/arfat/Coding/Fast/DBMS/Source.cpp
 
 CMakeFiles/DBMS.dir/Source.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DBMS.dir/Source.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arfat/Coding/Fast/DBMS/Source.cpp > CMakeFiles/DBMS.dir/Source.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arfat/Coding/Fast/DBMS/Source.cpp > CMakeFiles/DBMS.dir/Source.cpp.i
 
 CMakeFiles/DBMS.dir/Source.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DBMS.dir/Source.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arfat/Coding/Fast/DBMS/Source.cpp -o CMakeFiles/DBMS.dir/Source.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arfat/Coding/Fast/DBMS/Source.cpp -o CMakeFiles/DBMS.dir/Source.cpp.s
 
 # Object files for target DBMS
 DBMS_OBJECTS = \

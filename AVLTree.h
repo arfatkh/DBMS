@@ -265,9 +265,9 @@ public:
             {
                 Node<T>* temp = min(root->right);
                 root->key = temp->key;
-                root->right = remove(root->right,
-                    temp->key);
+                root->right = remove(root->right,*temp->val);
             }
+
         }
         if (root == NULL)
             return root;
@@ -329,21 +329,21 @@ public:
         if (root == NULL)
             return;
         InOrderTraversal(root->left);
-        // cout << root->key << " ";
-        root->val->print();
+        cout << root->key << "\n";
+        // root->val->print();
         InOrderTraversal(root->right);
     }
 
     //Searching key and returning Node<T>
-    Node<T>* Search(Value<T> key, Node<T>* root) {
+    Node<T>* Search( Node<T>* root, Value<T> key) {
         //finding key in tree
         // STEP 1: PERFORM STANDARD BST DELETE 
         if (root == NULL)
-            return root;
+            return NULL;
         if (key < root->key)
-            root->left = remove(root->left, key);
+            return Search(root->left, key);
         else if (key > root->key)
-            root->right = remove(root->right, key);
+            return Search(root->right, key);
         else
             return root;
     }
