@@ -410,6 +410,9 @@ void DeleteRowFromCSV(string filename, int LineNumber)
 
 void UpdateInCSV(int lineNumber, string filename, string field,string oldValue, string newValue)
 {
+
+	cout<<"running on file ["<<filename<<"]"<<endl;
+
 	//Considers the first line as the header as 1
 	//Considers the first field as 0
 
@@ -437,19 +440,28 @@ void UpdateInCSV(int lineNumber, string filename, string field,string oldValue, 
 		return;
 	}
 
+	//MAke a temp file
+	
+	
+	
+	
 
+	ofstream tempFile("./datafiles/temp.csv",ios::out);
 
-	ofstream tempFile("Test.txt",ios::out);
 
 
 
 	string line;
 	int LineCount = 0;
 	while (getline(file, line))
-	{
+	{	
+		
+
 		LineCount++;
+		
 		if(LineCount==lineNumber)
 		{
+			// cout<<"Tell G while reading: "<<file.tellg()<<endl;
 			string tempLine = "";
 			int fieldIndex = GetFieldIndex(field);
 			int fieldCount = 0;
@@ -496,6 +508,7 @@ void UpdateInCSV(int lineNumber, string filename, string field,string oldValue, 
 						}
 
 						tempLine.replace(oldIndex,oldValue.length(),newValue);
+						// line= tempLine;
 						// cout<<"Old Index: "<<oldIndex<<endl;
 						// break;
 
@@ -504,33 +517,33 @@ void UpdateInCSV(int lineNumber, string filename, string field,string oldValue, 
 				}
 				index++;
 			}
-			
 
-			cout<<"Temp Line: "<<tempLine<<endl;
-
-			// // // //Move the file pointer behind to  the size of the line
-			// file.seekp(-line.length(),ios::cur);
-			// // // //Write the new line
-			// file.write("\n",1);
-            
-			
-
-			// // // //Move the file pointer behind to  the size of the line
-			
-			
-			
-
-			break;
-
-
-
+			tempFile<<tempLine<<endl;
 		}
+		else
+		{
+			tempFile<<line<<endl;
+		}
+		
+
+	
+
+
+
 
 
 	}
 	
 	file.close();
+	tempFile.close();
 	
+	//Remove the original file
+	remove(filename.c_str());
+	//Rename the temp file to the original file
+	rename("./datafiles/temp.csv",filename.c_str());
+
+	
+
 	
 }
 

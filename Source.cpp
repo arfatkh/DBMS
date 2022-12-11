@@ -27,23 +27,23 @@ int main() {
 
 
 	Value<Choosen> some;
-	some.tuple = "California";
+	some.tuple = "Dikhan";
 
 	Node<Choosen>* result =  test->Search(test->root,some);
 	// // test->root = test->remove(test->root, some);
 
-	// if(result!=NULL)
-	// 	result->val->print(); 
-	// else
-	// 	cout << "Not found" << endl;
+	if(result!=NULL)
+		result->val->print(); 
+	else
+		cout << "Not found" << endl;
 
 
-	for(int i=0;i<result->val->Entries;i++)
-	{
+	// for(int i=0;i<result->val->Entries;i++)
+	// {
 
-	UpdateInCSV(result->val->lineNumber[i],result->val->fileName[i], "state", "California", "Dikhan");
+	// UpdateInCSV(result->val->lineNumber[i],result->val->fileName[i], "state", "California", "Dikhan");
 	
-	}
+	// }
 
 
 
