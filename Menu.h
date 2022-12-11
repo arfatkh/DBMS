@@ -13,11 +13,15 @@ void Menu();
 void searchKeyMenu();
 void rangeSearchMenu();
 void pointSearchMenu();
+void updateMenu();
 
 
+void reloadAllTrees();
+bool IsValidFeild(string field);
 
 void DeleteMenu();
 void pointDelete(string field);
+void pointUpdate(string field);
 
 void ClearScreen();
 void pause();
@@ -144,7 +148,7 @@ void MenuMain()
             break;
         }
         case 3:
-            // RBTree();
+            updateMenu();
             break;
         case 4:
             DeleteMenu();
@@ -170,6 +174,65 @@ void MenuMain()
 
 
 }
+
+
+
+
+void updateMenu()
+{
+    int choice;
+    do
+    {
+        cout<<"1. Update by ID as Key"<<endl;
+        cout<<"2. Update by Year as Key"<<endl;
+        cout<<"3. Update by Deaths as Key"<<endl;
+        cout<<"4. Update by CauseNameString as Key"<<endl;
+        cout<<"5. Update by CauseName as Key"<<endl;
+        cout<<"6. Update by State as Key"<<endl;
+        cout<<"7. Update by AgeAdjustedDeathRateas Key"<<endl;
+        cout<<"8. Back"<<endl;
+        choice = getIntChoice("Enter your choice: ", 1, 8);
+
+        switch (choice)
+        {
+        case 1:
+            pointUpdate("id");
+            break;
+        case 2:
+            pointUpdate("year");
+            break;
+        case 3:
+            pointUpdate("deaths");
+            break;
+        case 4:
+            pointUpdate("133cause");
+            break;
+        case 5:
+            pointUpdate("cause");
+            break;
+        case 6:
+            pointUpdate("state");
+            break;
+        case 7:
+            pointUpdate("agedeathrate");
+            break;
+        case 8:
+            break;
+        default:
+            cout << "Invalid Input!!" << endl;
+            break;
+        }
+
+    } while (choice != 8);
+
+
+}
+
+
+
+
+
+
 
 void DeleteMenu()
 {
@@ -241,6 +304,269 @@ void searchKeyMenu()
     } while (choice!=3);
     
 
+
+
+}
+
+
+void pointUpdate(string field)
+{
+    if(field=="id")
+    {
+        if(TreeHistory.AVL_ID)
+        {
+            //LOAD THE TREE
+                AVL_ID = new AVLtree<int>;
+                LoadAVLTree(AVL_ID,"./TreeData/AVL_ID.bin");
+
+            int key;
+            do
+            {
+                key = getIntChoice("[-1 to quit] Enter the ID to update: ", -1, 1000000);
+                if(key==-1)
+                    break;
+                
+
+                Value<int> resVal;
+                resVal.tuple = key;
+	            Node<int>* result =  AVL_ID->Search(AVL_ID->root,resVal);
+
+                if(result==NULL)
+                {
+                    cout<<prntRed;
+                    cout<<"ID NOT FOUND!"<<endl;
+                    cout<<prntClr;
+                }
+                else
+                {
+                    cout<<prntGreen;
+                    cout<<"ID FOUND!"<<endl;
+                    result->val->print();
+                    cout<<prntClr;
+
+                    string feildToUpdate;
+                    cout <<" Available feilds !";
+                    cout<<"[id,year,deaths,133cause,cause,state,agedeathrate]"<<endl;
+                    
+                    do{
+                        cout<<"Enter the feild to update: ";
+                        cin>>feildToUpdate;
+                  
+                    }while(!IsValidFeild(feildToUpdate));
+                  
+
+
+
+                    cout<<"Enter the Old value: ";
+                    string oldVal;
+                    cin>>oldVal;
+
+                    cout<<"Enter the New value: ";
+                    string newVal;
+                    cin>>newVal;
+
+                        
+                    for(int i=0;i<result->val->Entries;i++)
+                    {
+
+                    UpdateInCSV(result->val->lineNumber[i],result->val->fileName[i], feildToUpdate, oldVal, newVal);
+                    
+                    
+                    }
+
+                    cout<<prntGreen;
+                    cout<<feildToUpdate<<" UPDATED! Successfull"<<endl;
+                    cout<<prntClr;
+                    //reload ALL THE TREES
+                    // loadAVLTree(AVL_ID,"./TreeData/AVL_ID.bin");
+                    reloadAllTrees();
+
+                }
+                
+
+            } while (key!=-1);           
+
+        }
+        // else if (TreeHistory.RB_ID)
+        // {
+
+        // }
+        else
+        {
+            cout<<prntRed;
+            cout<<"NO INDEX OF ID EXISTS!"<<endl;
+            cout<<prntClr;
+        }
+
+    }
+    else if (field=="year")
+    {
+        if(TreeHistory.AVL_Year)
+        {
+            //LOAD THE TREE
+                AVL_Year = new AVLtree<int>;
+                LoadAVLTree(AVL_Year,"./TreeData/AVL_Year.bin");
+
+            int key;
+            do
+            {
+                key = getIntChoice("[-1 to quit] Enter the Year to update: ", -1, 1000000);
+                if(key==-1)
+                    break;
+                
+
+                Value<int> resVal;
+                resVal.tuple = key;
+                Node<int>* result =  AVL_Year->Search(AVL_Year->root,resVal);
+
+                if(result==NULL)
+                {
+                    cout<<prntRed;
+                    cout<<"Year NOT FOUND!"<<endl;
+                    cout<<prntClr;
+                }
+                else
+                {
+                    cout<<prntGreen;
+                    cout<<"Year FOUND!"<<endl;
+                    result->val->print();
+                    cout<<prntClr;
+
+                    string feildToUpdate;
+                    cout <<" Available feilds !";
+                    cout<<"[id,year,deaths,133cause,cause,state,agedeathrate]"<<endl;
+                    
+                    do{
+                        cout<<"Enter the feild to update: ";
+                        cin>>feildToUpdate;
+                  
+                    }while(!IsValidFeild(feildToUpdate));
+
+
+                    cout<<"Enter the Old value: ";
+                    string oldVal;
+                    cin>>oldVal;
+
+                    cout<<"Enter the New value: ";
+                    string newVal;
+                    cin>>newVal;
+
+
+                    for(int i=0;i<result->val->Entries;i++)
+                    {
+                        UpdateInCSV(result->val->lineNumber[i],result->val->fileName[i], feildToUpdate, oldVal, newVal);
+                    }
+
+
+                    cout<<prntGreen;
+                    cout<<feildToUpdate<<" UPDATED! Successfull"<<endl;
+                    cout<<prntClr;
+
+                    //reload ALL THE TREES
+                    reloadAllTrees();
+
+
+                }
+
+            }while (key!=-1);
+       
+       
+        }
+        // else if(TreeHistory.RB_Year)
+        // {
+
+        // }
+        else
+        {
+            cout<<prntRed;
+            cout<<"NO INDEX OF Year EXISTS!"<<endl;
+            cout<<prntClr;
+        }
+
+        }
+    else if (field=="deaths")
+    {
+        if(TreeHistory.AVL_Deaths)
+        {
+            //LOAD THE TREE
+                AVL_Deaths = new AVLtree<int>;
+                LoadAVLTree(AVL_Deaths,"./TreeData/AVL_Deaths.bin");
+
+            int key;
+            do
+            {
+                key = getIntChoice("[-1 to quit] Enter the Deaths to update: ", -1, 1000000);
+                if(key==-1)
+                    break;
+                
+
+                Value<int> resVal;
+                resVal.tuple = key;
+                Node<int>* result =  AVL_Deaths->Search(AVL_Deaths->root,resVal);
+
+                if(result==NULL)
+                {
+                    cout<<prntRed;
+                    cout<<"Deaths NOT FOUND!"<<endl;
+                    cout<<prntClr;
+                }
+                else
+                {
+                    cout<<prntGreen;
+                    cout<<"Deaths FOUND!"<<endl;
+                    result->val->print();
+                    cout<<prntClr;
+
+                    string feildToUpdate;
+                    cout <<" Available feilds !";
+                    cout<<"[id,year,deaths,133cause,cause,state,agedeathrate]"<<endl;
+                    
+                    do{
+                        cout<<"Enter the feild to update: ";
+                        cin>>feildToUpdate;
+                  
+                    }while(!IsValidFeild(feildToUpdate));
+
+
+                    cout<<"Enter the Old value: ";
+                    string oldVal;
+                    cin>>oldVal;
+
+                    cout<<"Enter the New value: ";
+                    string newVal;
+                    cin>>newVal;
+
+                    for(int i=0;i<result->val->Entries;i++)
+                    {
+                        UpdateInCSV(result->val->lineNumber[i],result->val->fileName[i], feildToUpdate, oldVal, newVal);
+                    }
+
+
+                    cout<<prntGreen;
+                    cout<<feildToUpdate<<" UPDATED! Successfull"<<endl;
+                    cout<<prntClr;
+
+
+                    //reload ALL THE TREES
+                    reloadAllTrees();
+                }
+
+            }while (key!=-1);
+
+        }
+                    
+
+
+
+
+
+
+
+
+
+
+}
+    
 
 
 }
@@ -1211,6 +1537,66 @@ void pointSearchMenu()
 }
 
 
+void reloadAllTrees()
+{
+    cout<<prntYellow;
+    cout<<"Reloading All Trees..."<<endl;
+    cout<<prntClr;
+
+    if(TreeHistory.AVL_ID)
+    {
+        AVL_ID = new AVLtree<int>;
+        LoadAVLTree(AVL_ID,"./TreeData/AVL_ID.bin");
+        saveAVLTree(AVL_ID,"./TreeData/AVL_ID.bin");
+    }
+    if(TreeHistory.AVL_Year)
+    {
+        AVL_Year = new AVLtree<int>;
+        LoadAVLTree(AVL_Year,"./TreeData/AVL_Year.bin");
+        saveAVLTree(AVL_Year,"./TreeData/AVL_Year.bin");
+    }
+    if(TreeHistory.AVL_Deaths)
+    {
+        AVL_Deaths = new AVLtree<int>;
+        LoadAVLTree(AVL_Deaths,"./TreeData/AVL_Deaths.bin");
+        saveAVLTree(AVL_Deaths,"./TreeData/AVL_Deaths.bin");
+    }
+    if(TreeHistory.AVL_CauseNameString)
+    {
+        AVL_CauseNameString = new AVLtree<string>;
+        LoadAVLTree(AVL_CauseNameString,"./TreeData/AVL_CauseNameString.bin");
+        saveAVLTree(AVL_CauseNameString,"./TreeData/AVL_CauseNameString.bin");
+    }
+    if(TreeHistory.AVL_CauseName)
+    {
+        AVL_CauseName = new AVLtree<string>;
+        LoadAVLTree(AVL_CauseName,"./TreeData/AVL_CauseName.bin");
+        saveAVLTree(AVL_CauseName,"./TreeData/AVL_CauseName.bin");
+    }
+    if(TreeHistory.AVL_State)
+    {
+        AVL_State = new AVLtree<string>;
+        LoadAVLTree(AVL_State,"./TreeData/AVL_State.bin");
+        saveAVLTree(AVL_State,"./TreeData/AVL_State.bin");
+    }
+    if(TreeHistory.AVL_AgeAdjustedDeathRate)
+    {
+        AVL_AgeAdjustedDeathRate = new AVLtree<float>;
+        LoadAVLTree(AVL_AgeAdjustedDeathRate,"./TreeData/AVL_AgeAdjustedDeathRate.bin");
+        saveAVLTree(AVL_AgeAdjustedDeathRate,"./TreeData/AVL_AgeAdjustedDeathRate.bin");
+    }
+
+
+
+    cout<<prntGreen;
+    cout<<"All Trees Reloaded"<<endl;
+    cout<<prntClr;
+
+
+
+
+}
+
 
 
 void createIndexTreeMenu()
@@ -1558,6 +1944,35 @@ void pause()
     #else
         system("read -n 1 -s -p \"Press any key to continue...\"\n");
     #endif
+}
+
+bool IsValidFeild(string feild)
+{
+    if (feild=="id")
+    return true;
+    else if (feild=="year")
+    return true;
+    else if (feild=="death")
+    return true;
+    else if (feild=="agedeathrate")
+    return true;
+    else if (feild=="cause")
+    return true;
+    else if (feild=="state")
+    return true;
+    else if (feild=="133cause")
+    return true;
+    else
+    {
+        cout<<prntRed;
+        cout<<"Invalid Field!!"<<endl;
+        cout<<prntClr;
+        return false;
+    }
+
+
+
+
 }
 
 

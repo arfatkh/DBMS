@@ -18,24 +18,24 @@ int main() {
 	
 	
 
-	typedef string Choosen;
-	string field = "state";
+	// typedef string Choosen;
+	// string field = "state";
 
-	AVLtree<Choosen>* test= new AVLtree<Choosen>;
-	// // Read_all_field_AVL<int>(test,field, filename);
-	Read_all_files_AVL<Choosen>(test, field);
+	// AVLtree<Choosen>* test= new AVLtree<Choosen>;
+	// // // Read_all_field_AVL<int>(test,field, filename);
+	// Read_all_files_AVL<Choosen>(test, field);
 
 
-	Value<Choosen> some;
-	some.tuple = "Dikhan";
+	// Value<Choosen> some;
+	// some.tuple = "Dikhan";
 
-	Node<Choosen>* result =  test->Search(test->root,some);
-	// // test->root = test->remove(test->root, some);
+	// Node<Choosen>* result =  test->Search(test->root,some);
+	// // // test->root = test->remove(test->root, some);
 
-	if(result!=NULL)
-		result->val->print(); 
-	else
-		cout << "Not found" << endl;
+	// if(result!=NULL)
+	// 	result->val->print(); 
+	// else
+	// 	cout << "Not found" << endl;
 
 
 	// for(int i=0;i<result->val->Entries;i++)
@@ -45,7 +45,7 @@ int main() {
 	
 	// }
 
-
+MenuMain();
 
 	
 

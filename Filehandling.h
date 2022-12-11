@@ -143,9 +143,9 @@ bool Read_all_field_AVL(AVLtree<T>* avltree,string  field, string filename) {
 	int fieldIndex = GetFieldIndex(field);
 
 	if (fieldIndex == -1) {
-		cout<<prntRed;
-		cout << "Invalid field" << endl;
-		cout<<prntClr;
+		// cout<<prntRed;
+		// cout << "Invalid field" << endl;
+		// cout<<prntClr;
 		return false;
 	}
 	
@@ -542,7 +542,7 @@ void UpdateInCSV(int lineNumber, string filename, string field,string oldValue, 
 	//Rename the temp file to the original file
 	rename("./datafiles/temp.csv",filename.c_str());
 
-	
+
 
 	
 }
