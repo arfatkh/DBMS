@@ -212,6 +212,7 @@ public:
 
 	}
 
+
 	void writeToBinaryFile(ofstream& out) {
 		
 
