@@ -459,7 +459,8 @@ public:
 			RBnode<T>* temp = search(val);
 
 			if (temp->val == val) {
-				// return if value already exists
+				// return if value already exists and record the duplicate of the val in the node
+				root->val.duplicates(val.Entries,val.fileName, val.lineNumber, val.tuple); 
 				return;
 			}
 
