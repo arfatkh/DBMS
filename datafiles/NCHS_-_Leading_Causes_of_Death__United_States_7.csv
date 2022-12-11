@@ -420,24 +420,24 @@ ID,Year,113 Cause Name,Cause Name,State,Deaths,Age-adjusted Death Rate
 6529,2001,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Virginia,1481,24.1
 6530,2000,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Virginia,1510,25.1
 6531,1999,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Virginia,1594,27.1
-6532,2016,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Washington,815,10
-6533,2015,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Washington,851,10.7
-6534,2014,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Washington,729,9.4
-6535,2013,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Washington,768,10.1
-6536,2012,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Washington,728,9.9
-6537,2011,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Washington,734,10.1
-6538,2010,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Washington,578,8.3
-6539,2009,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Washington,728,10.6
-6540,2008,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Washington,771,11.6
-6541,2007,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Washington,743,11.4
-6542,2006,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Washington,814,12.9
-6543,2005,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Washington,927,15.2
-6544,2004,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Washington,738,12.4
-6545,2003,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Washington,1086,18.8
-6546,2002,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Washington,907,16
-6547,2001,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Washington,965,17.4
-6548,2000,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Washington,1010,18.7
-6549,1999,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Washington,1259,23.7
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
 6550,2016,Influenza and pneumonia (J09-J18),Influenza and pneumonia,West Virginia,423,17.3
 6551,2015,Influenza and pneumonia (J09-J18),Influenza and pneumonia,West Virginia,526,21.2
 6552,2014,Influenza and pneumonia (J09-J18),Influenza and pneumonia,West Virginia,473,19.6
@@ -492,24 +492,24 @@ ID,Year,113 Cause Name,Cause Name,State,Deaths,Age-adjusted Death Rate
 6601,2001,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Wyoming,112,24.5
 6602,2000,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Wyoming,126,28.3
 6603,1999,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Wyoming,130,30
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
 6622,2016,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alaska,53,10
 6623,2015,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alaska,50,10
 6624,2014,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Alaska,45,10.1

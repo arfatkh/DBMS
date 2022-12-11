@@ -1,15 +1,15 @@
 ID,Year,113 Cause Name,Cause Name,State,Deaths,Age-adjusted Death Rate
-8411,2009,Cerebrovascular diseases (I60-I69),Stroke,Washington,2591,38.6
-8412,2008,Cerebrovascular diseases (I60-I69),Stroke,Washington,2773,42.3
-8413,2007,Cerebrovascular diseases (I60-I69),Stroke,Washington,2692,42.1
-8414,2006,Cerebrovascular diseases (I60-I69),Stroke,Washington,2725,43.6
-8415,2005,Cerebrovascular diseases (I60-I69),Stroke,Washington,2895,48.1
-8416,2004,Cerebrovascular diseases (I60-I69),Stroke,Washington,3243,55.1
-8417,2003,Cerebrovascular diseases (I60-I69),Stroke,Washington,3595,62.4
-8418,2002,Cerebrovascular diseases (I60-I69),Stroke,Washington,3753,66.6
-8419,2001,Cerebrovascular diseases (I60-I69),Stroke,Washington,3765,68.1
-8420,2000,Cerebrovascular diseases (I60-I69),Stroke,Washington,3714,68.7
-8421,1999,Cerebrovascular diseases (I60-I69),Stroke,Washington,3718,69.9
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
 8422,2016,Cerebrovascular diseases (I60-I69),Stroke,West Virginia,1039,41.7
 8423,2015,Cerebrovascular diseases (I60-I69),Stroke,West Virginia,1079,43.8
 8424,2014,Cerebrovascular diseases (I60-I69),Stroke,West Virginia,1103,45.3
@@ -64,24 +64,24 @@ ID,Year,113 Cause Name,Cause Name,State,Deaths,Age-adjusted Death Rate
 8473,2001,Cerebrovascular diseases (I60-I69),Stroke,Wyoming,260,56.7
 8474,2000,Cerebrovascular diseases (I60-I69),Stroke,Wyoming,260,58.3
 8475,1999,Cerebrovascular diseases (I60-I69),Stroke,Wyoming,265,60.7
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
 8494,2016,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alaska,193,25.8
 8495,2015,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alaska,201,26.9
 8496,2014,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Alaska,167,22.1
@@ -928,24 +928,24 @@ ID,Year,113 Cause Name,Cause Name,State,Deaths,Age-adjusted Death Rate
 9337,2001,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Virginia,797,11
 9338,2000,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Virginia,768,10.8
 9339,1999,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Virginia,791,11.2
-9340,2016,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Washington,1141,14.9
-9341,2015,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Washington,1137,15.4
-9342,2014,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Washington,1119,15.2
-9343,2013,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Washington,1027,14.1
-9344,2012,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Washington,1038,14.5
-9345,2011,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Washington,1021,14.3
-9346,2010,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Washington,957,13.9
-9347,2009,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Washington,921,13.3
-9348,2008,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Washington,889,13.2
-9349,2007,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Washington,865,13.1
-9350,2006,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Washington,809,12.3
-9351,2005,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Washington,822,12.8
-9352,2004,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Washington,830,13.3
-9353,2003,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Washington,803,13.1
-9354,2002,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Washington,811,13.4
-9355,2001,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Washington,712,11.9
-9356,2000,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Washington,727,12.4
-9357,1999,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Washington,816,14
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
 9358,2016,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,West Virginia,362,19.3
 9359,2015,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,West Virginia,340,17.4
 9360,2014,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,West Virginia,359,18.1
@@ -1000,23 +1000,23 @@ ID,Year,113 Cause Name,Cause Name,State,Deaths,Age-adjusted Death Rate
 9409,2001,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Wyoming,83,16.4
 9410,2000,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Wyoming,83,16.8
 9411,1999,"Intentional self-harm (suicide) (*U03,X60-X84,Y87.0)",Suicide,Wyoming,98,20.3
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
 9429,2015,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alaska,388,57.9
 9430,2014,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alaska,379,55
 9431,2013,"Accidents (unintentional injuries) (V01-X59,Y85-Y86)",Unintentional injuries,Alaska,353,52.5

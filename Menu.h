@@ -115,6 +115,8 @@ void MenuMain()
     TreeHistory.ReadFromFile();
     int choice;
 
+    ClearScreen();
+
     do
     {
         // ClearScreen();
@@ -295,6 +297,7 @@ void pointDelete(string feild)
                         cout<<"Record Deleted"<<endl;
                         cout<<prntClr;
                         pause();
+
                     }
                     else
                     {
@@ -795,6 +798,8 @@ void pointDelete(string feild)
 
    
 }
+
+
 void pointSearch(string feild)
 {
     // cout<<"point search";
@@ -826,6 +831,7 @@ void pointSearch(string feild)
                     result->val->print();
                     cout<<endl;
                     cout<<prntClr;
+
 
                 }
                 else
@@ -892,7 +898,12 @@ void pointSearch(string feild)
             }while (true);
 
         }
-            
+        else
+        {
+            cout<<prntRed;
+            cout<<"AVL Tree for Year is not created"<<endl;
+            cout<<prntClr;
+        }   
 
 
 
@@ -940,7 +951,12 @@ void pointSearch(string feild)
             }while (true);
 
         }
-
+        else
+        {
+            cout<<prntRed;
+            cout<<"AVL Tree for Deaths is not created"<<endl;
+            cout<<prntClr;
+        }
     
 
 
@@ -988,7 +1004,12 @@ void pointSearch(string feild)
             }while (true);
 
         }
-
+        else
+        {
+            cout<<prntRed;
+            cout<<"AVL Tree for Cause is not created"<<endl;
+            cout<<prntClr;
+        }
 
 
 }
@@ -1031,7 +1052,12 @@ void pointSearch(string feild)
             }while (true);
 
         }
-
+        else
+        {
+            cout<<prntRed;
+            cout<<"AVL Tree for State is not created"<<endl;
+            cout<<prntClr;
+        }
 
 
 
@@ -1075,7 +1101,12 @@ void pointSearch(string feild)
             }while (true);
 
         }
-    
+        else
+        {
+            cout<<prntRed;
+            cout<<"AVL Tree for Age Adjusted Death Rate is not created"<<endl;
+            cout<<prntClr;
+        }
     
 
 }
@@ -1118,9 +1149,17 @@ void pointSearch(string feild)
             }while (true);
 
         }
-
+        else
+        {
+            cout<<prntRed;
+            cout<<"AVL Tree for Cause Name is not created"<<endl;
+            cout<<prntClr;
+        }
     }
+
+
 }
+
 void pointSearchMenu()
 {
     int choice;
@@ -1163,6 +1202,9 @@ void pointSearchMenu()
             break;
         }
 
+        // ClearScreen();
+        //         pause();
+
 
     } while (choice!=8);
 
@@ -1174,7 +1216,9 @@ void pointSearchMenu()
 void createIndexTreeMenu()
 {
     int choice;
-    string field, filename = "NCHS_-_Leading_Causes_of_Death__United_States_1.csv";
+    string field;
+
+    ClearScreen();
 
     do
     {
@@ -1188,6 +1232,7 @@ void createIndexTreeMenu()
         switch (choice)
         {
         case 1:
+        {
             cout << "Which field you want to read?\n";
             cout<<"1. ID"<<endl;
             cout<<"2. Year"<<endl;
@@ -1241,8 +1286,9 @@ void createIndexTreeMenu()
                     break;
                 }
             }
-
-            // Read_all_field_AVL(field, filename);
+        
+            break;
+        }
             break;
         case 2:
             // BTree();
@@ -1490,6 +1536,10 @@ float getFloatChoice(string Prompt, float min, float max)
     return choice;
 
 }
+
+
+
+
 
 void ClearScreen()
 {

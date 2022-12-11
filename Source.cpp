@@ -97,10 +97,10 @@ int main() {
 
 
 	// Value<Choosen> some;
-	// some.tuple = "Washington";
+	// some.tuple = "California";
 
 	// Node<Choosen>* result =  test->Search(test->root,some);
-	// test->root = test->remove(test->root, some);
+	// // test->root = test->remove(test->root, some);
 
 	// if(result!=NULL)
 	// 	result->val->print(); 
@@ -108,6 +108,9 @@ int main() {
 	// 	cout << "Not found" << endl;
 
 
+	// UpdateInCSV(result->val->lineNumber[0],result->val->fileName[0], "state", "California", "Islamabad");
+
+	
 
 // 	// saveAVLTree(test, "avlString.dat");
 	
@@ -119,10 +122,16 @@ int main() {
 // // 
 	// test->InOrderTraversal(test->root);
 
-	MenuMain();
+	// MenuMain();
 	// printRecordFromFile("./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_1.csv",43);
 
 	// DeleteRowFromCSV("./datafiles/100test.csv", 4);
+
+	UpdateInCSV(3,"./datafiles/100test.csv", "state", "Alaska","Karachi");
+	// DeleteRowFromCSV("./datafiles/100test.csv", 1);
+	// UpdateInCSV(2,"./datafiles/100test.csv", "state", "test ","Washington");
+	// UpdateInCSV(1,"./datafiles/100test.csv", "state", "test ","Washington");
+
 
 	return 0;
 

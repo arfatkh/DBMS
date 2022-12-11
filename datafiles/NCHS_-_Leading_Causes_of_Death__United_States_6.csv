@@ -494,24 +494,24 @@ ID,Year,113 Cause Name,Cause Name,State,Deaths,Age-adjusted Death Rate
 5593,2001,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Virginia,14913,234.5
 5594,2000,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Virginia,15264,245.5
 5595,1999,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Virginia,15329,250.9
-5596,2016,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Washington,11161,136.1
-5597,2015,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Washington,11025,137.6
-5598,2014,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Washington,10710,137.2
-5599,2013,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Washington,10524,138.2
-5600,2012,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Washington,10360,139.3
-5601,2011,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Washington,10439,143.8
-5602,2010,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Washington,10602,151.5
-5603,2009,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Washington,10561,153.9
-5604,2008,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Washington,10916,164
-5605,2007,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Washington,11037,170.1
-5606,2006,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Washington,10604,168.4
-5607,2005,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Washington,10985,180.5
-5608,2004,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Washington,10644,179.3
-5609,2003,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Washington,11185,192.8
-5610,2002,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Washington,11141,196.4
-5611,2001,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Washington,11281,203.3
-5612,2000,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Washington,11370,209.7
-5613,1999,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Washington,11515,215.7
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
 5614,2016,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,West Virginia,4767,191
 5615,2015,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,West Virginia,4727,191.3
 5616,2014,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,West Virginia,4692,192.9
@@ -566,24 +566,24 @@ ID,Year,113 Cause Name,Cause Name,State,Deaths,Age-adjusted Death Rate
 5665,2001,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Wyoming,985,211.9
 5666,2000,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Wyoming,992,217.4
 5667,1999,"Diseases of heart (I00-I09,I11,I13,I20-I51)",Heart disease,Wyoming,1009,227.8
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
 5686,2016,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Alaska,61,12.5
 5687,2015,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Alaska,41,8.4
 5688,2014,Influenza and pneumonia (J09-J18),Influenza and pneumonia,Alaska,68,14.1

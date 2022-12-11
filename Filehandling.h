@@ -5,7 +5,7 @@
 #include "AVLtree.h"
 #include "myDataStructures.h"
 #include <filesystem>
-
+#include <sstream>
 namespace fs = std::filesystem;
 
 using namespace std;
@@ -288,6 +288,7 @@ void LoadAVLTree(AVLtree<T>* avltree, string filename) {
 	if (!file.is_open()) {
 		cout<<prntRed;
 		cout << "Error Opening File ["<<filename<<"]!" << endl;
+		exit(1);
 		cout<<prntClr;
 		return;
 	}
@@ -374,7 +375,7 @@ void DeleteRowFromCSV(string filename, int LineNumber)
 		count++;
 		if(count==LineNumber)
 		{
-			temp += "0,0 , , , , , 0,0.0 \n"; //Replace the line with this dummy line
+			temp += "0,0, , , ,0,0.0\n"; //Replace the line with this dummy line
 			continue;
 		}
 		temp += line + "\n";
@@ -402,3 +403,130 @@ void DeleteRowFromCSV(string filename, int LineNumber)
 	cout<<prntClr;
 
 }
+
+
+
+
+
+void UpdateInCSV(int lineNumber, string filename, string field,string oldValue, string newValue)
+{
+	//Considers the first line as the header as 1
+	//Considers the first field as 0
+
+	//if the new value has a comma, then cover it with quotes
+	if(newValue.find(",")!=string::npos)
+	{
+		newValue = "\""+newValue+"\"";
+	}
+
+	// // if the new value has a quote, then cover it with double quotes
+	// if(newValue.find("\"")!=string::npos)
+	// {
+	// 	newValue = "\""+newValue+"\"";
+	// }
+
+
+
+
+	fstream file(filename,ios::in | ios::out);
+	if(!file.is_open())
+	{
+		cout<<prntRed;
+		cout<<"Error opening file"<<endl;
+		cout<<prntClr;
+		return;
+	}
+
+
+
+
+
+	string line;
+	int LineCount = 0;
+	while (getline(file, line))
+	{
+		LineCount++;
+		if(LineCount==lineNumber)
+		{
+			string tempLine = "";
+			int fieldIndex = GetFieldIndex(field);
+			int fieldCount = 0;
+			int index = 0;
+			//Go to the field while ignoring quotes
+			while (index < line.length())
+			{
+				tempLine += line[index];
+
+				if(line[index]=='"')
+				{
+					index++;
+					tempLine += line[index];
+					while(line[index]!='"')
+					{
+						index++;
+						tempLine += line[index];
+					}
+					index++;
+					tempLine += line[index];
+				}
+
+				else if(line[index]==',')
+				{
+					fieldCount++;
+					if(fieldCount==fieldIndex+1)
+					{
+						cout<<"Feild Count: "<<fieldCount<<endl;
+						cout<<"Feild Index: "<<fieldIndex<<endl;
+						cout<<"oldValue: "<<oldValue<<endl;
+
+
+
+
+						// //Replace the old value with the new value
+						int oldIndex = tempLine.find(oldValue);
+						if(oldIndex==-1)
+						{
+							cout<<prntRed;
+							cout<<"Error: The old value ["<<oldValue<<"] does not exist in the file"<<endl;
+							cout<<prntClr;
+							cout<<tempLine<<endl;
+							return;
+						}
+
+						tempLine.replace(oldIndex,oldValue.length(),newValue);
+						// cout<<"Old Index: "<<oldIndex<<endl;
+						// break;
+
+
+					}
+				}
+				index++;
+			}
+			
+
+			cout<<"Temp Line: "<<tempLine<<endl;
+
+			// //Move the file pointer behind to  the size of the line
+			file.seekp(-line.length()-2,ios::cur);
+			file<<tempLine;
+
+
+
+			
+			
+
+			break;
+
+
+
+		}
+
+
+	}
+	
+
+	
+	
+}
+
+

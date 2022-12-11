@@ -357,24 +357,24 @@ ID,Year,113 Cause Name,Cause Name,State,Deaths,Age-adjusted Death Rate
 7466,2001,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Virginia,1128,17.8
 7467,2000,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Virginia,1118,17.9
 7468,1999,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Virginia,1035,16.9
-7469,2016,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Washington,532,6.6
-7470,2015,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Washington,474,5.9
-7471,2014,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Washington,481,6.2
-7472,2013,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Washington,461,6.1
-7473,2012,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Washington,482,6.6
-7474,2011,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Washington,492,6.8
-7475,2010,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Washington,552,8
-7476,2009,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Washington,509,7.5
-7477,2008,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Washington,471,7.1
-7478,2007,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Washington,440,6.8
-7479,2006,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Washington,423,6.7
-7480,2005,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Washington,450,7.5
-7481,2004,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Washington,348,5.9
-7482,2003,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Washington,304,5.3
-7483,2002,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Washington,306,5.4
-7484,2001,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Washington,279,5
-7485,2000,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Washington,293,5.4
-7486,1999,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Washington,278,5.2
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
 7487,2016,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,West Virginia,481,19.3
 7488,2015,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,West Virginia,510,20.4
 7489,2014,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,West Virginia,479,19.6
@@ -429,24 +429,24 @@ ID,Year,113 Cause Name,Cause Name,State,Deaths,Age-adjusted Death Rate
 7538,2001,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Wyoming,54,11.7
 7539,2000,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Wyoming,45,9.9
 7540,1999,"Nephritis, nephrotic syndrome and nephrosis (N00-N07,N17-N19,N25-N27)",Kidney disease,Wyoming,30,6.8
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
-0,0 , , , , , 0,0.0 
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
 7559,2016,Cerebrovascular diseases (I60-I69),Stroke,Alaska,196,39
 7560,2015,Cerebrovascular diseases (I60-I69),Stroke,Alaska,182,36.8
 7561,2014,Cerebrovascular diseases (I60-I69),Stroke,Alaska,157,32.3
@@ -1292,10 +1292,10 @@ ID,Year,113 Cause Name,Cause Name,State,Deaths,Age-adjusted Death Rate
 8401,2001,Cerebrovascular diseases (I60-I69),Stroke,Virginia,4129,66.3
 8402,2000,Cerebrovascular diseases (I60-I69),Stroke,Virginia,4104,67.4
 8403,1999,Cerebrovascular diseases (I60-I69),Stroke,Virginia,4110,68.7
-8404,2016,Cerebrovascular diseases (I60-I69),Stroke,Washington,2910,35.8
-8405,2015,Cerebrovascular diseases (I60-I69),Stroke,Washington,2703,34.2
-8406,2014,Cerebrovascular diseases (I60-I69),Stroke,Washington,2649,34.3
-8407,2013,Cerebrovascular diseases (I60-I69),Stroke,Washington,2652,35.5
-8408,2012,Cerebrovascular diseases (I60-I69),Stroke,Washington,2513,34.3
-8409,2011,Cerebrovascular diseases (I60-I69),Stroke,Washington,2557,35.8
-8410,2010,Cerebrovascular diseases (I60-I69),Stroke,Washington,2548,37
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
+0,0, , , ,0,0.0
