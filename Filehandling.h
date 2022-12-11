@@ -1,8 +1,43 @@
+/*
+Coded By:
+
+Muhammad Farjad i210660
+Muhammad Arfat i210554
+Sufian Sajjad i210688
+
+
+*/
+
+/*
+
+    ================== ABOUT FILEHANDLING.H ==================
+
+This file managing all the file handling operations. It has the following functions:
+1. Reading All CSV Files
+2. Reading a single CSV File
+3. Reading a single CSV File and storing it in a tree
+4. Reading a single CSV File and storing it in a tree and printing it
+5. Reading a single CSV File and storing it in a tree and printing it and searching it
+6. Reading a single CSV File and storing it in a tree and printing it and searching it and deleting it
+7. Reading a single CSV File and storing it in a tree and printing it and searching it and deleting it and updating it
+8. Reading a single CSV File and storing it in a tree and printing it and searching it and deleting it and updating it and inserting it
+9. Reading a single CSV File and storing it in a tree and printing it and searching it and deleting it and updating it and inserting it and printing the tree	
+10. Reading a single CSV File and storing it in a tree and printing it and searching it and deleting it and updating it and inserting it and printing the tree and saving it to a file	
+
+[Basically all the functions are in the same order as mentioned above]
+
+
+
+*/ 
+
+
+
 #pragma once
 #include<iostream>
 #include<fstream>
 #include<string>
 #include "AVLtree.h"
+#include "RBTree.h"
 #include "myDataStructures.h"
 #include <filesystem>
 #include <sstream>
@@ -82,6 +117,12 @@ Value<T> StringToValue(string line, int fieldIndex, int lineNumber, string filen
 	// Check the type of T
 	if constexpr (std::is_same<T, int>::value) {
 
+			if (value == " " ) {
+				returnObj.fileName[0] = "NA";
+				return returnObj;
+			}
+				
+
 		returnObj.insert(filename, lineNumber,stoi(value));
 	}
 	
@@ -92,8 +133,14 @@ Value<T> StringToValue(string line, int fieldIndex, int lineNumber, string filen
 		returnObj.insert(filename, lineNumber, stof(value));
 	}
 	else if constexpr (std::is_same<T, string>::value) {
-		// returnObj.datatype = "string";
-		// returnObj.tuple = value;
+	
+			if (value == " " ) {
+				returnObj.fileName[0] = "NA";
+				return returnObj;
+			}
+				
+
+
 		returnObj.insert(filename, lineNumber, value);
 	}
 	else {
@@ -115,7 +162,11 @@ Value<T> StringToValue(string line, int fieldIndex, int lineNumber, string filen
 	return returnObj;
 }
 
-//Get the index of the field in the file
+
+
+
+//Get the index of the field in the file 
+//This is used to get the index of the field in the file
 int GetFieldIndex(string field) {
 
 	if (field == "id") return 0;
@@ -143,9 +194,9 @@ bool Read_all_field_AVL(AVLtree<T>* avltree,string  field, string filename) {
 	int fieldIndex = GetFieldIndex(field);
 
 	if (fieldIndex == -1) {
-		// cout<<prntRed;
-		// cout << "Invalid field" << endl;
-		// cout<<prntClr;
+		cout<<prntRed;
+		cout << "Invalid field" << endl;
+		cout<<prntClr;
 		return false;
 	}
 	
@@ -178,9 +229,12 @@ bool Read_all_field_AVL(AVLtree<T>* avltree,string  field, string filename) {
 
 		Value<T> v = StringToValue<T>(line, fieldIndex, lineNumber, filename);
 		// v->print();
-		
-		//Insert the value into the tree
-		avltree->root = avltree->insertNode(avltree->root, v);
+		if(v.fileName[0]!= "NA")
+		{
+				//Insert the value into the tree
+				avltree->root = avltree->insertNode(avltree->root, v);
+
+		}
 
 
 	
@@ -200,6 +254,8 @@ bool Read_all_field_AVL(AVLtree<T>* avltree,string  field, string filename) {
 }
 
 
+//Read_all_files explaination:
+//Calls Read_all_field for all the files in the datafiles folder
 template <typename T>
 bool Read_all_files_AVL(AVLtree<T>* avltree, string field) {
 	//set the current directory
@@ -225,10 +281,183 @@ bool Read_all_files_AVL(AVLtree<T>* avltree, string field) {
 
 
 
+//Read_all_field_RB explaination:
+//Opens the file and reads the given field of the file and stores it in an RB tree
+template <typename T>
+bool Read_all_field_RB(RBTree<T>* rbtree, string  field, string filename) {
+	
+	// AVLtree<T>* avltree=new AVLtree<T>;		//int for simplicities sake
+	int fieldIndex = GetFieldIndex(field);
+
+	if (fieldIndex == -1) {
+		cout<<prntRed;
+		cout << "Invalid field" << endl;
+		cout<<prntClr;
+		return false;
+	}
+	
+
+	//Open the file
+	ifstream file(filename);
+	if (!file.is_open()) {
+
+		cout<<prntRed;
+		cout << "File not found ["<<filename<<"] !" << endl;
+		cout<<prntClr;
+		return false;
+	}
+
+	//Read the file
+	string line;
+	int lineNumber = 1;
+	while (getline(file, line)) {
+		//Ignore the first line
+		if (lineNumber == 1) {
+			lineNumber++;
+			continue;
+		}
+
+		
+		Value<T> v = StringToValue<T>(line, fieldIndex, lineNumber, filename);
+
+		if(v.fileName[0] != "NA")
+		{
+				//Insert the value into the tree
+				rbtree->insert(v);
+
+		}
+		
+
+		//Increment the line number
+		lineNumber++;
+
+	}
+
+
+	return true;
+
+
+
+}
+
+
+//Calls The fucntion on all files
+template <typename T>
+bool Read_all_files_RB(RBTree<T>* rbtree, string field) {
+	
+
+	Read_all_field_RB<T>(rbtree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_1.csv");
+	Read_all_field_RB<T>(rbtree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_2.csv");
+	// Read_all_field_RB<T>(rbtree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_3.csv");
+	// Read_all_field_RB<T>(rbtree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_4.csv");
+	// Read_all_field_RB<T>(rbtree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_5.csv");
+	// Read_all_field_RB<T>(rbtree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_6.csv");
+	// Read_all_field_RB<T>(rbtree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_7.csv");
+	// Read_all_field_RB<T>(rbtree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_8.csv");
+	// Read_all_field_RB<T>(rbtree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_9.csv");
+	// Read_all_field_RB<T>(rbtree, field, "./datafiles/NCHS_-_Leading_Causes_of_Death__United_States_10.csv");
+
+	return true;
+
+}
+
+
+
+
+
+
+
 
 //========================================================================================================
-// Saving the trees to a file
 
+// FUNTIONS FOR SAVING AND LOADING THE TREES FROM FILES
+
+//========================================================================================================
+
+
+
+
+//SAVEs THE RED BLACK TREE TO A FILE
+template <typename T>
+bool saveRBTree(RBTree<T>* rbtree, string filename)
+{
+	//Open the file
+	ofstream file(filename, ios::binary);
+	if (!file.is_open()) {
+		cout << "Error Opening File ["<<filename<<"]!" << endl;
+		return false;
+	}
+
+	
+	//Save the tree using the Level order traversal
+	myDS::Queue<RBnode<T>*> ValueQueue;
+	ValueQueue.enqueue( rbtree->getRoot() );
+
+	// int count = 0;
+	// cout<<"Saving the tree to file"<<endl;
+	while (!ValueQueue.isEmpty()) {
+		
+		
+
+		RBnode<T>* current = ValueQueue.dequeue();
+
+		
+		current->val.writeToBinaryFile(file);
+
+		if (current->leftChild != nullptr) {
+			ValueQueue.enqueue(current->leftChild);
+		}
+		if (current->rightChild != nullptr) {
+			ValueQueue.enqueue(current->rightChild);
+		}
+
+		// count++;
+	}
+
+	cout<<prntGreen;
+	cout<<"Tree saved to file ["<<filename<<"]"<<endl;
+	cout<<prntClr;
+	
+	file.close();
+
+	return true;
+
+
+
+
+
+
+
+
+}
+
+//LOADS THE RED BLACK TREE FROM A FILE
+template <typename T>
+bool LoadRBTree(RBTree<T>* rbtree, string filename) {
+	//Open the file
+	ifstream file(filename, ios::binary);
+	if (!file.is_open()) {
+		cout << "Error Opening File ["<<filename<<"]!" << endl;
+		return false;
+	}
+
+	//Read the file
+	while (!file.eof()) {
+		Value<T> v;
+		v.readFromBinaryFile(file);
+		if (v.fileName[0] != "NA") {
+			rbtree->insert(v);
+		}
+	}
+
+	cout<<prntGreen;
+	cout<<"Tree loaded from file ["<<filename<<"]"<<endl;
+	cout<<prntClr;
+
+	file.close();
+
+	return true;
+}
 
 
 //Save the AVL tree to a file
@@ -274,6 +503,7 @@ bool saveAVLTree(AVLtree<T>* avltree, string filename) {
 	file.close();
 }
 
+//Load the AVL tree from a file
 template <typename T>
 void LoadAVLTree(AVLtree<T>* avltree, string filename) {
 
@@ -352,7 +582,18 @@ void printRecordFromFile(string filename,int LineNumber)
 
 
 
+
+
+
+
 //========================================================================================================
+
+// FUNTIONS FOR FILE MANIPULATION
+
+//========================================================================================================
+
+
+//This function deletes a row from a CSV file
 void DeleteRowFromCSV(string filename, int LineNumber)
 {
 	
@@ -405,9 +646,7 @@ void DeleteRowFromCSV(string filename, int LineNumber)
 }
 
 
-
-
-
+//This function updates a field in a CSV file
 void UpdateInCSV(int lineNumber, string filename, string field,string oldValue, string newValue)
 {
 

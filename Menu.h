@@ -1,45 +1,87 @@
+/*
+Coded By:
+
+Muhammad Farjad i210660
+Muhammad Arfat i210554
+Sufian Sajjad i210688
+
+
+*/
+
+
+/*
+
+ABOUT MENU.H
+
+This file manages the user interface  of the program.
+[Some Cool Features like Colorful Text, Clear Screen, Pause Screen, etc]
+
+
+*/
+
+
+
 #pragma once
 #include <iostream>
 #include "Filehandling.h"
-// #include "RBTree.h"
-// #include "Others.h"
 
 
 using namespace std;
 
 // Function prototypes
-//Menus
+//FOR DISPLAYING MENUS
 void Menu();
 void searchKeyMenu();
 void rangeSearchMenu();
 void pointSearchMenu();
 void updateMenu();
+void DeleteMenu();
 
 
 void reloadAllTrees();
+
+
+//VALIDATION FUNCTIONS
 bool IsValidFeild(string field);
 
-void DeleteMenu();
+
+
+//FUNCTIONS FOR SEARCHING AND UPDATING AND DELETING
 void pointDelete(string field);
 void pointUpdate(string field);
+void pointSearch(string field);
 
+
+
+//FOR BETTER USER INTERFACE
 void ClearScreen();
 void pause();
 int getIntChoice(string Prompt, int min, int max);
 float getFloatChoice(string Prompt, float min, float max);
 string getStringChoice(string Prompt);
+
+
+// MORE MENUS
 void createIndexTreeMenu();
 template <typename T>
 void createAVLTree(AVLtree<T>* tree,string field);
+template <typename T>
+void createRBTree(RBTree<T>* tree,string field);
 
 
 
 
 
 //Global Possible Tree Types
+
 AVLtree<int>* AVL_ID =nullptr , * AVL_Year =nullptr , * AVL_Deaths =nullptr;
 AVLtree<string>* AVL_CauseNameString =nullptr, *AVL_CauseName=nullptr, * AVL_State=nullptr;
 AVLtree<float>* AVL_AgeAdjustedDeathRate=nullptr;
+
+RBTree<int>* RB_ID =nullptr , * RB_Year =nullptr , * RB_Deaths =nullptr;
+RBTree<string>* RB_CauseNameString =nullptr, *RB_CauseName=nullptr, * RB_State=nullptr;
+RBTree<float>* RB_AgeAdjustedDeathRate=nullptr;
+
 
 
 //Saves the history of trees made
@@ -48,6 +90,11 @@ struct TreesUsed
     bool AVL_ID = false, AVL_Year = false, AVL_Deaths = false;
     bool AVL_CauseNameString = false, AVL_CauseName = false, AVL_State = false;
     bool AVL_AgeAdjustedDeathRate = false;
+
+
+    bool RB_ID = false, RB_Year = false, RB_Deaths = false;
+    bool RB_CauseNameString = false, RB_CauseName = false, RB_State = false;
+    bool RB_AgeAdjustedDeathRate = false;
 
     void SaveInFile()
     {
@@ -60,6 +107,17 @@ struct TreesUsed
         file << AVL_CauseName << endl;
         file << AVL_State << endl;
         file << AVL_AgeAdjustedDeathRate << endl;
+
+        file << RB_ID << endl;
+        file << RB_Year << endl;
+        file << RB_Deaths << endl;
+        file << RB_CauseNameString << endl;
+        file << RB_CauseName << endl;
+        file << RB_State << endl;
+        file << RB_AgeAdjustedDeathRate << endl;
+
+
+
         file.close();
     }
 
@@ -74,6 +132,16 @@ struct TreesUsed
         file >> AVL_CauseName;
         file >> AVL_State;
         file >> AVL_AgeAdjustedDeathRate;
+
+        file >> RB_ID;
+        file >> RB_Year;
+        file >> RB_Deaths;
+        file >> RB_CauseNameString;
+        file >> RB_CauseName;
+        file >> RB_State;
+        file >> RB_AgeAdjustedDeathRate;
+
+
         file.close();
     }
 
@@ -104,6 +172,34 @@ struct TreesUsed
         cout<<"============================================"<<endl;
         cout<< prntClr;
      
+
+        cout<<prntCyan;
+        cout<<"==============RB Trees Used================"<<endl;
+        cout<< prntClr;
+
+        RB_ID ? cout<<prntClr<<prntGreen : cout<<prntRed;
+        cout << "1. RB_ID " <<endl;
+        RB_Year ? cout<<prntClr<<prntGreen : cout<<prntRed;
+        cout << "2. RB_Year " <<endl;
+        RB_Deaths ? cout<<prntClr<<prntGreen : cout<<prntRed;
+        cout << "3. RB_Deaths " <<endl;
+        RB_CauseNameString ? cout<<prntClr<<prntGreen : cout<<prntRed;
+        cout << "4. RB_CauseNameString " <<endl;
+        RB_CauseName ? cout<<prntClr<<prntGreen : cout<<prntRed;
+        cout << "5. RB_CauseName " <<endl;
+        RB_State ? cout<<prntClr<<prntGreen : cout<<prntRed;
+        cout << "6. RB_State " <<endl;
+        RB_AgeAdjustedDeathRate ? cout<<prntClr<<prntGreen : cout<<prntRed;
+        cout << "7. RB_AgeAdjustedDeathRate " <<endl;
+        cout<<prntClr;
+
+        cout<<prntCyan;
+        cout<<"============================================"<<endl;
+        cout<< prntClr;
+
+
+    
+        pause();
 
 
 
@@ -178,6 +274,7 @@ void MenuMain()
 
 
 
+//MENU FOR UPDATING ENTRY
 void updateMenu()
 {
     int choice;
@@ -231,9 +328,7 @@ void updateMenu()
 
 
 
-
-
-
+//MENU FOR DELETING ENTRY
 void DeleteMenu()
 {
     int choice;
@@ -278,6 +373,7 @@ void DeleteMenu()
     } while (choice!=8);
 }
 
+//MENU FOR SEARCHING ENTRY
 void searchKeyMenu()
 {
     int choice;
@@ -308,7 +404,7 @@ void searchKeyMenu()
 
 }
 
-
+//MENU FOR POINT UPDATE
 void pointUpdate(string field)
 {
     if(field=="id")
@@ -1537,6 +1633,8 @@ void pointSearchMenu()
 }
 
 
+
+//RELOAD ALL TREES FROM FILE AND SAVE THEM AGAIN
 void reloadAllTrees()
 {
     cout<<prntYellow;
@@ -1676,12 +1774,67 @@ void createIndexTreeMenu()
             break;
         }
             break;
-        case 2:
-            // BTree();
-            break;
         case 3:
-            // RBTree();
+        {
+            cout << "Which field you want to read?\n";
+            cout<<"1. ID"<<endl;
+            cout<<"2. Year"<<endl;
+            cout<<"3. 113 Cause Name"<<endl;
+            cout<<"4. Cause Name"<<endl;
+            cout<<"5. State"<<endl;
+            cout<<"6. Deaths"<<endl;
+            cout<<"7. Age Adjusted Death Rate"<<endl;
+            cout<<"8. Back"<<endl;
+            choice = getIntChoice("Enter your choice: ", 1, 8);
+
+            switch (choice)
+            {
+                case 1:
+                {
+                    createRBTree<int>(RB_ID, "id");
+                    break;
+                }
+                case 2:
+                {
+                    createRBTree<int>(RB_Year, "year");
+                    break;
+                }
+                case 3:
+                {
+                    createRBTree<string>(RB_CauseNameString, "133cause");
+                    break;
+                }
+                case 4:
+                {
+                    createRBTree<string>(RB_CauseName, "cause");
+                    break;
+                }
+                case 5:
+                {
+                    createRBTree<string>(RB_State, "state");
+                    break;
+                }
+                case 6:
+                {
+                    createRBTree<int>(RB_Deaths, "deaths");
+                    break;
+                }
+                case 7:
+                {
+                    createRBTree<float>(RB_AgeAdjustedDeathRate, "agedeathrate");
+                    break;
+                }
+
+                
+                case 8:
+                {
+                    break;
+                }
+            }
             break;
+        }
+        // case 3:
+            // break;
         case 4:
             // Others();
             break;
@@ -1691,6 +1844,169 @@ void createIndexTreeMenu()
         }
 
     } while (choice != 4);
+
+}
+
+
+template <typename T>
+void createRBTree(RBTree<T>* tree,string field)
+{
+    string filename;
+
+    if(field=="id")
+    {    filename="./TreeData/RB_ID.bin";
+        RB_ID = new RBTree<int>();
+                    
+        if(Read_all_files_RB(RB_ID, field))
+        {
+            cout<<prntGreen;
+            cout<<"Index Created Successfully for Red Black Tree on ID!"<<endl;
+            cout<<prntClr;
+            TreeHistory.RB_ID = true;
+            TreeHistory.SaveInFile();
+            saveRBTree(RB_ID, filename);
+        }
+        else
+        {
+            cout<<prntRed;
+            cout<<"Index Creation Failed for Red Black Tree on ID!"<<endl;
+            cout<<prntClr;
+        }
+    }     
+    else if(field=="year")
+    {    filename="./TreeData/RB_Year.bin";
+        RB_Year = new RBTree<int>();
+                    
+        if(Read_all_files_RB(RB_Year, field))
+        {
+            cout<<prntGreen;
+            cout<<"Index Created Successfully for Red Black Tree on Year!"<<endl;
+            cout<<prntClr;
+            TreeHistory.RB_Year = true;
+            TreeHistory.SaveInFile();
+            saveRBTree(RB_Year, filename);
+        }
+        else
+        {
+            cout<<prntRed;
+            cout<<"Index Creation Failed for Red Black Tree on Year!"<<endl;
+            cout<<prntClr;
+        }
+    }     
+    else if(field=="133cause")
+    {    filename="./TreeData/RB_CauseNameString.bin";
+        RB_CauseNameString = new RBTree<string>();
+                    
+        if(Read_all_files_RB(RB_CauseNameString, field))
+        {
+            cout<<prntGreen;
+            cout<<"Index Created Successfully for Red Black Tree on 113 Cause Name!"<<endl;
+            cout<<prntClr;
+            TreeHistory.RB_CauseNameString = true;
+            TreeHistory.SaveInFile();
+            saveRBTree(RB_CauseNameString, filename);
+        }
+        else
+        {
+            cout<<prntRed;
+            cout<<"Index Creation Failed for Red Black Tree on 113 Cause Name!"<<endl;
+            cout<<prntClr;
+        }
+    }     
+    else if(field=="cause")
+    {    filename="./TreeData/RB_CauseName.bin";
+        RB_CauseName = new RBTree<string>();
+                    
+        if(Read_all_files_RB(RB_CauseName, field))
+        {
+            cout<<prntGreen;
+            cout<<"Index Created Successfully for Red Black Tree on Cause Name!"<<endl;
+            cout<<prntClr;
+            TreeHistory.RB_CauseName = true;
+            TreeHistory.SaveInFile();
+            saveRBTree(RB_CauseName, filename);
+        }
+        else
+        {
+            cout<<prntRed;
+            cout<<"Index Creation Failed for Red Black Tree on Cause Name!"<<endl;
+            cout<<prntClr;
+        }
+
+
+
+    }
+    else if(field=="state")
+    {    filename="./TreeData/RB_State.bin";
+        RB_State = new RBTree<string>();
+                    
+        if(Read_all_files_RB(RB_State, field))
+        {
+            cout<<prntGreen;
+            cout<<"Index Created Successfully for Red Black Tree on State!"<<endl;
+            cout<<prntClr;
+            TreeHistory.RB_State = true;
+            TreeHistory.SaveInFile();
+            saveRBTree(RB_State, filename);
+        }
+        else
+        {
+            cout<<prntRed;
+            cout<<"Index Creation Failed for Red Black Tree on State!"<<endl;
+            cout<<prntClr;
+        }
+    }     
+    else if(field=="deaths")
+    {    filename="./TreeData/RB_Deaths.bin";
+        RB_Deaths = new RBTree<int>();
+                    
+        if(Read_all_files_RB(RB_Deaths, field))
+        {
+            cout<<prntGreen;
+            cout<<"Index Created Successfully for Red Black Tree on Deaths!"<<endl;
+            cout<<prntClr;
+            TreeHistory.RB_Deaths = true;
+            TreeHistory.SaveInFile();
+            saveRBTree(RB_Deaths, filename);
+        }
+        else
+        {
+            cout<<prntRed;
+            cout<<"Index Creation Failed for Red Black Tree on Deaths!"<<endl;
+            cout<<prntClr;
+        }
+    }     
+    else if(field=="agedeathrate")
+    {    filename="./TreeData/RB_AgeAdjustedDeathRate.bin";
+        RB_AgeAdjustedDeathRate = new RBTree<float>();
+                    
+        if(Read_all_files_RB(RB_AgeAdjustedDeathRate, field))
+        {
+            cout<<prntGreen;
+            cout<<"Index Created Successfully for Red Black Tree on Age Adjusted Death Rate!"<<endl;
+            cout<<prntClr;
+            TreeHistory.RB_AgeAdjustedDeathRate = true;
+            TreeHistory.SaveInFile();
+            saveRBTree(RB_AgeAdjustedDeathRate, filename);
+        }
+        else
+        {
+            cout<<prntRed;
+            cout<<"Index Creation Failed for Red Black Tree on Age Adjusted Death Rate!"<<endl;
+            cout<<prntClr;
+        }
+    }
+    else
+    {
+        cout<<prntRed;
+        cout<<"Invalid Field!!"<<endl;
+        cout<<prntClr;
+    }
+    
+
+
+
+
 
 }
 
@@ -1973,65 +2289,6 @@ bool IsValidFeild(string feild)
 
 
 
-}
-
-
-struct Trunk
-{
-	Trunk *prev;
-	string str;
-
-	Trunk(Trunk *prev, string str)
-	{
-		this->prev = prev;
-		this->str = str;
-	}
-};
-
-// Helper function to print branches of the binary tree
-void showTrunks(Trunk *p)
-{
-	if (p == nullptr) {
-		return;
-	}
-
-	showTrunks(p->prev);
-	cout << p->str;
-}
-
-void printTree(Node<int>* root, Trunk *prev, bool isLeft)
-{
-	if (root == nullptr) {
-		return;
-	}
-
-	string prev_str = "    ";
-	Trunk *trunk = new Trunk(prev, prev_str);
-
-	printTree(root->right, trunk, true);
-
-	if (!prev) {
-		trunk->str = "———";
-	}
-	else if (isLeft)
-	{
-		trunk->str = ".———";
-		prev_str = "   |";
-	}
-	else {
-		trunk->str = "`———";
-		prev->str = prev_str;
-	}
-
-	showTrunks(trunk);
-	cout << " " << root->key << endl;
-
-	if (prev) {
-		prev->str = prev_str;
-	}
-	trunk->str = "   |";
-
-	printTree(root->left, trunk, false);
 }
 
 

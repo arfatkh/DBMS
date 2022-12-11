@@ -1,3 +1,30 @@
+/*
+Coded By:
+
+Muhammad Farjad i210660
+Muhammad Arfat i210554
+Sufian Sajjad i210688
+
+*/
+
+
+/*
+
+    ABOUT AVT TREE.H
+
+    This file contains the class AVLtree and the struct Node.
+    FUlly implemented AVL tree with insert, delete, search, and print functions.
+
+
+
+
+
+
+*/
+
+
+
+
 #pragma once
 #include<iostream>
 #include"Others.h"
@@ -329,8 +356,8 @@ public:
         if (root == NULL)
             return;
         InOrderTraversal(root->left);
-        cout << root->key << "\n";
-        // root->val->print();
+        // cout << root->key << "\n";
+        root->val->print();
         InOrderTraversal(root->right);
     }
 

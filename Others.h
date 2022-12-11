@@ -1,3 +1,30 @@
+/*
+Coded By:
+
+Muhammad Farjad i210660
+Muhammad Arfat i210554
+Sufian Sajjad i210688
+
+
+*/
+
+/*
+	ABOUT OTHERS.h
+
+	Basically all the functions and classes needed but not suitable for any other file are here
+	like the Data class and the Value class 
+	Also the functions that are used in multiple files are here
+	like the stringLoadCSV function ETC
+
+
+
+
+
+
+*/
+
+
+
 #pragma once
 #include<iostream>
 #include<string>
@@ -153,35 +180,7 @@ public:
 		return false;
 	}
 
-	//If  is string
-	// if constexpr (std::is_same<T, string>::value) 
-	// {
 
-	// bool operator<(Value<T> v) {
-	// 	if constexpr (std::is_same<T, string>::value) {
-	// 		if (strcmp(tuple.c_str(), v.tuple.c_str()) == -1)
-	// 			return true;
-	// 		return false;
-	// 	}
-	// 	else if (tuple < v.tuple)
-	// 		return true;
-	// 	return false;
-	// }
-
-	// bool operator>(Value<T> v) {
-	// 	if constexpr (std::is_same<T, string>::value) {
-	// 		if (strcmp(tuple.c_str(), v.tuple.c_str()) == 1)
-	// 			return true;
-	// 		return false;
-	// 	}
-	// 	else if (tuple > v.tuple)
-	// 		return true;
-	// 	return false;
-	// }
-
-
-
-	// }
 
 
 

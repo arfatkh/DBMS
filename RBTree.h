@@ -1,8 +1,16 @@
-#pragma once
-#include<iostream>
-#include"Others.h"
+/*
+Coded By:
+
+Muhammad Farjad i210660
+Muhammad Arfat i210554
+Sufian Sajjad i210688
+
+
+*/
+
 
 /*
+FULL IMPLEMENTATION OF RED BLACK TREE
 	RB Tree Manual:
 		Rules:
 			-> The root will always be Black
@@ -23,6 +31,14 @@
 			-> Otherwise Double Black situation comes and we see the 6 cases
 
 */
+
+
+
+#pragma once
+#include<iostream>
+#include"Others.h"
+
+
 enum COLOR { RED, BLACK };
 template<typename T>
 class RBnode {
@@ -410,7 +426,8 @@ class RBTree {
 		if (Val == NULL)
 			return;
 		inorder(Val->leftChild);
-		cout << Val->val.tuple << " ";
+		// cout << Val->val.tuple << " ";
+		Val->val.print();
 		inorder(Val->rightChild);
 	}
 

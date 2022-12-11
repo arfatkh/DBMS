@@ -1,4 +1,34 @@
-//Coded by Muhammad Arfat i210554@nu.edu.pk
+/*
+Coded By:
+
+Muhammad Farjad i210660
+Muhammad Arfat i210554
+Sufian Sajjad i210688
+
+
+*/
+/*
+    =================  ABOUT MYDATASTRUCTURES.H  =================
+
+    This file contains all the data structures used in the project. 
+    The data structures are:
+    1. Stack
+    2. Queue
+    3. Priority Queue
+    4. Linked List
+    etc
+
+*/
+
+
+
+
+
+
+
+
+
+
 #pragma once
 #include<iostream>
 
