@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/Users/arfat/Coding/Fast/DBMS/build",
-  "command": "/usr/bin/clang++  -I/Users/arfat/Coding/Fast/DBMS/. -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -std=gnu++17 -o CMakeFiles/DBMS.dir/Source.cpp.o -c /Users/arfat/Coding/Fast/DBMS/Source.cpp",
-  "file": "/Users/arfat/Coding/Fast/DBMS/Source.cpp"
-}
-]

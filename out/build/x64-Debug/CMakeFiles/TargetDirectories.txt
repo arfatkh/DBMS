@@ -1,3 +1,0 @@
-C:/Users/mcm/source/repos/DBMS/out/build/x64-Debug/CMakeFiles/DBMS.dir
-C:/Users/mcm/source/repos/DBMS/out/build/x64-Debug/CMakeFiles/edit_cache.dir
-C:/Users/mcm/source/repos/DBMS/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
