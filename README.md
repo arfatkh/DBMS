@@ -37,3 +37,5 @@ to index the data (stored in files) so that different search and update operatio
 
 - [@arfatkh](https://www.github.com/arfatkh)
 - [@BeastMasterGrinder](https://www.github.com/BeastMasterGrinder)
+- [@SufianSajjad](https://github.com/SufianSajjad)
+
